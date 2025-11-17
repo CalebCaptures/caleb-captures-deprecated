@@ -1,0 +1,90 @@
+.contact-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-form {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background-navigation);
+
+    border-radius: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.contact-form form label input {
+    height: 50px;
+    width: 100%;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form form label textarea {
+    height: 170px;
+    width: 100%;
+    padding: 1rem;
+
+    border: none;
+
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.contact-form form button {
+    height: 50px;
+
+    border: none;
+    background-color: #FFA1AD;
+    color: #FFFFFF;
+    border-radius: 1rem;
+}
+
+.contact-information-container {
+    width: 500px;
+    height: 200px;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-information-image {
+    width: 2rem;
+    height: 2rem;
+}
+
+.contact-information-section {
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-information-label-and-value {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.contact-information-label {
+   margin: 0;
+}
+
+.contact-information-value {
+    margin: 0;
+}
