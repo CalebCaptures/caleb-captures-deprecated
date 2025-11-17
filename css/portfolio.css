@@ -34,3 +34,7 @@ nav[role="tablist"] button:hover {
 #portfolio img {
     height: 300px;
 }
+
+.hide {
+    display: none;
+}
