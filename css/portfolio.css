@@ -41,15 +41,43 @@ nav[role="tablist"] button:hover {
 
 .test {
     display: flex;
-    justify-content: space-between; /* centres items horizontally */
+    justify-content: space-around; /* centres items horizontally */
+    gap: 0.5rem;
 }
 
 .test2 {
     display: flex;
 
-    width: 33%;
+    flex: 1;
 
     flex-direction: column;
 
     gap: 0.5rem;
+}
+
+.test3 {
+    display: flex;
+    justify-content: space-around; /* centres items horizontally */
+    gap: 0.5rem;
+
+}
+
+.test4 {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+}
+
+.newSection {
+    width: 100%;
+}
+
+.jim {
+    width: 99%;
+    margin: 0 auto;
 }
