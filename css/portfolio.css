@@ -38,3 +38,15 @@ nav[role="tablist"] button:hover {
 .hide {
     display: none;
 }
+
+.test {
+    display: flex;
+    justify-content: space-around; /* centres items horizontally */
+    /* or */
+    align-items: center; /* centres vertically */
+
+}
+
+.test2 {
+    width: 30%;
+}
