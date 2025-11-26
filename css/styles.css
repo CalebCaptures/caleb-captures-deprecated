@@ -1,9 +1,11 @@
 :root {
-    --background-primary: #FFF1F2;
-    --background-navigation: #E8D5E8;
+    --background-primary: #1A1A1A;
+    --background-navigation: #FCEDA5;
 
-    --text-navigation-unselected: #364153;
-    --text-navigation-selected: #FF637E;
+    --text-primary: #E8E6E1;
+    --text-on-background-primary: #3D3226;
+    --text-navigation-unselected: #3D3226;
+    --text-navigation-selected: #1A5F5F;
 }
 
 html {
@@ -89,6 +91,27 @@ section {
     width: 80%;
 
     margin: 0 auto;
+}
+
+h1, h2, h3, p {
+    color: var(--text-primary);
+}
+
+.text-on-background-primary {
+   color: var(--text-on-background-primary);
+}
+
+.navigation-selected {
+    color: var(--text-navigation-selected);
+}
+
+#home-button {
+    height: 100%;
+}
+
+.home-image {
+    width: 5rem;
+    height: 100%;
 }
 
 #hero div {
