@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: gotham-font;
-    src: url("/fonts/gotham_regular.otf");
+    src: url("../fonts/gotham_regular.otf");
 }
 
 html {
