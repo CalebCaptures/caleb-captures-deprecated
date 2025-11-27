@@ -5,7 +5,7 @@
 
 .contact-form {
     width: 500px;
-    height: 500px;
+    height: 600px;
     padding: 20px;
 
     display: flex;
@@ -75,16 +75,6 @@
     gap: 1rem;
 }
 
-.contact-information-label-and-value {
-    display: flex;
-    gap: 0.5rem;
-    flex-direction: column;
-}
-
 .contact-information-label {
    margin: 0;
-}
-
-.contact-information-value {
-    margin: 0;
 }

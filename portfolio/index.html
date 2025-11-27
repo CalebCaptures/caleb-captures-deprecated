@@ -9,17 +9,17 @@
 </head>
 
 <body>
-<nav role="navigation">
+<nav id="navigation-bar" role="navigation">
     <div>
-        <a id="home-button" href="../">
-            <img src="../images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
-        </a>
-    </div>
-
-    <div>
-        <ul>
+        <ul class="navigation-list">
             <li><a href="" class="navigation-selected">Portfolio</a></li>
             <li><a href="../services/">Services</a></li>
+            <li>
+                <a id="home-button" href="../">
+                    <img src="../images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
+                </a>
+            </li>
+            <li><a href="../about/">About</a></li>
             <li><a href="../contact/">Contact</a></li>
         </ul>
     </div>
@@ -44,6 +44,11 @@
         </div>
     </div>
 </section>
+
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-image" class="lightbox-image" src="" alt="">
+</div>
 
 <script src="portfolio.js"></script>
 </body>

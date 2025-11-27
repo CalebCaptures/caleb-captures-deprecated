@@ -9,17 +9,15 @@
     </head>
 
     <body>
-        <nav role="navigation">
+        <nav id="navigation-bar" role="navigation">
             <div>
-                <a id="home-button" href="../">
-                    <img src="../images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
-                </a>
-            </div>
-
-            <div>
-                <ul>
+                <ul class="navigation-list">
                     <li><a href="../portfolio/">Portfolio</a></li>
                     <li><a href="../services/">Services</a></li>
+                    <a id="home-button" href="../">
+                        <img src="../images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
+                    </a>
+                    <li><a href="../about/">About</a></li>
                     <li><a href="" class="navigation-selected">Contact</a></li>
                 </ul>
             </div>
@@ -40,6 +38,14 @@
                         </label>
 
                         <label>
+                            <input type="text" name="budget" placeholder="Budget"/>
+                        </label>
+
+                        <label>
+                            <input type="text" name="subject" placeholder="Subject"/>
+                        </label>
+
+                        <label>
                             <textarea name="message" placeholder="Message" rows="6"></textarea>
                         </label>
 
@@ -54,9 +60,8 @@
                     <div class="contact-information-section">
                         <img class="contact-information-image" src="../images/contact/mail.svg" alt="Email Icon">
 
-                        <div class="contact-information-label-and-value">
-                            <h3 class="contact-information-label">Email</h3>
-                            <p class="contact-information-value">calebcaptures.au@gmail.com</p>
+                        <div>
+                            <h3 class="contact-information-label">Email: calebcaptures.au@gmail.com</h3>
                         </div>
                     </div>
 
@@ -64,9 +69,8 @@
                         <div class="contact-information-section">
                             <img class="contact-information-image" src="../images/contact/instagram.svg" alt="Instagram Logo Icon">
 
-                            <div class="contact-information-label-and-value">
-                                <h3 class="contact-information-label">Instagram</h3>
-                                <p class="contact-information-value">@calebcaptures.au</p>
+                            <div>
+                                <h3 class="contact-information-label">Instagram: @calebcaptures.au</h3>
                             </div>
                     </div>
                     </a>

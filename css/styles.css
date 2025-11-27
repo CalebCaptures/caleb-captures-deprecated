@@ -8,11 +8,16 @@
     --text-navigation-selected: #1A5F5F;
 }
 
+@font-face {
+    font-family: gotham-font;
+    src: url("/fonts/gotham_regular.otf");
+}
+
 html {
     width: 100%;
     /*margin: 0 auto;*/
 
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: gotham-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
 }
 
@@ -20,9 +25,12 @@ body {
     width: 100%;
 
     margin: 0;
-    padding-bottom: 5rem;
 
     background-color: var(--background-primary);
+}
+
+button {
+    font-family: gotham-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 nav[role="navigation"] {
@@ -41,12 +49,17 @@ nav[role="navigation"] {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+#navigation-bar.lightbox-active {
+    visibility: hidden;
+}
+
 #home-button {
     display: inline-flex;
     align-items: center;
 
     gap: 0.5rem;
 }
+
 #home-button img {
     max-width: fit-content;
 }
@@ -64,9 +77,11 @@ nav div {
 
 }
 
-nav div ul {
+.navigation-list {
     width: 100%;
     height: 100%;
+
+    padding-inline-start: 0;
 
     display: flex;
     justify-content: space-around;
@@ -88,9 +103,9 @@ nav div ul li a:target {
 }
 
 section {
-    width: 80%;
+    width: 90%;
 
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 h1, h2, h3, p {
@@ -103,6 +118,7 @@ h1, h2, h3, p {
 
 .navigation-selected {
     color: var(--text-navigation-selected);
+    font-weight: 700;
 }
 
 #home-button {
@@ -112,32 +128,4 @@ h1, h2, h3, p {
 .home-image {
     width: 5rem;
     height: 100%;
-}
-
-#hero div {
-    width: 100%;
-
-    text-align: center;
-}
-
-#featured-works-container {
-    display: flex;
-
-    justify-content: space-between;
-}
-
-#featured-works-container img {
-    width: 30%;
-}
-
-img {
-    width: 100%;
-
-    border-radius: 1rem;
-
-    object-fit: cover;
-}
-
-.hero-image {
-    max-height: 600px;
 }

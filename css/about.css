@@ -1,0 +1,11 @@
+#hero-image {
+    max-height: 700px;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
+#about-description-container {
+    text-align: center;
+}

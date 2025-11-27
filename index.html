@@ -9,17 +9,17 @@
     </head>
 
     <body>
-        <nav role="navigation">
+        <nav id="navigation-bar" role="navigation">
             <div>
-                <a id="home-button" href="">
-                    <img src="images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
-                </a>
-            </div>
-
-            <div>
-                <ul>
+                <ul class="navigation-list">
                     <li><a href="portfolio/">Portfolio</a></li>
                     <li><a href="services/">Services</a></li>
+                    <li>
+                        <a id="home-button" href="">
+                            <img src="images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
+                        </a>
+                    </li>
+                    <li><a href="about/">About</a></li>
                     <li><a href="contact/">Contact</a></li>
                 </ul>
             </div>
@@ -27,30 +27,36 @@
 
         <section id="hero">
             <div>
-                <h1>relaxed vibes ● authentic shots ● real memories</h1>
+                <h1>relaxed vibes, authentic shots, real memories</h1>
                 <h2>Professional photography services across Brisbane</h2>
             </div>
 
             <div>
-                <img class="hero-image" src="images/home/hero.jpg" alt="hero-image">
+                <img id="hero-image" src="images/home/hero.jpg" alt="hero-image">
             </div>
         </section>
 
         <section id="featured-works">
-            <div>
-                <h2>examples of work</h2>
-            </div>
-
             <div id="featured-works-container">
-                <img src="images/home/1.jpg" alt="example work 1">
-                <img src="images/home/2.jpg" alt="example work 2">
-                <img src="images/home/3.jpg" alt="example work 3">
+                <div class="featured-work-container">
+                    <img src="images/home/portrait_1.jpg" alt="portrait photo 1" class="featured-work">
+                </div>
+
+                <div id="landscape-featured-works-container" class="featured-work-container">
+                    <img src="images/home/landscape_1.jpg" alt="landscape photo 1" class="featured-work">
+                    <img src="images/home/landscape_2.jpg" alt="landscape photo 2" class="featured-work">
+                </div>
+
+                <div class="featured-work-container">
+                    <img src="images/home/portrait_2.jpg" alt="portrait photo 2" class="featured-work">
+                </div>
             </div>
         </section>
     </body>
 
     <header>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
     </header>
 
 </html>

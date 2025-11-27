@@ -9,17 +9,17 @@
     </head>
 
     <body>
-        <nav role="navigation">
+        <nav id="navigation-bar" role="navigation">
             <div>
-                <a id="home-button" href="../">
-                    <img src="../images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
-                </a>
-            </div>
-
-            <div>
-                <ul>
+                <ul class="navigation-list">
                     <li><a href="../portfolio/">Portfolio</a></li>
                     <li><a href="" class="navigation-selected">Services</a></li>
+                    <li>
+                        <a id="home-button" href="../">
+                            <img src="../images/navigation/caleb_captures_logo.png" class="home-image" alt="Home Button">
+                        </a>
+                    </li>
+                    <li><a href="../about/">About</a></li>
                     <li><a href="../contact/">Contact</a></li>
                 </ul>
             </div>
@@ -27,25 +27,23 @@
 
         <section>
             <div class="services">
-                <div class="service">
-                    <h2 class="text-on-background-primary">Portraiture</h2>
-                    <p class="text-on-background-primary">Professional portrait sessions for individuals, couples, and families</p>
-                </div>
+                <a href="../contact/" class="service">
+                    <h2 class="text-on-background-primary">Portraits</h2>
+                    <p class="text-on-background-primary">Interested in a moody portrait session? Got an outfit or prop you'd love to experiment with? Need a new linkedin headshot? I got you.</p>
+                </a>
+                <a href="../contact/" class="service">
+                    <h2 class="text-on-background-primary">Events</h2>
+                    <p class="text-on-background-primary">Parties, functions, birthdays, D&D sessions - you name it, i’ll shoot it.</p>
+                </a>
+                <a href="../contact/" class="service">
+                    <h2 class="text-on-background-primary">Venues</h2>
+                    <p class="text-on-background-primary">Coffee shops, restaurants, businesses - let’s hear your vision and bring it to life</p>
+                </a>
 
-                <div class="service">
-                    <h2 class="text-on-background-primary">Event Photography</h2>
-                    <p class="text-on-background-primary">Coverage for weddings, parties, corporate events, and special occasions</p>
-                </div>
 
-                <div class="service">
-                    <h2 class="text-on-background-primary">Venue Photography</h2>
-                    <p class="text-on-background-primary">Architectural and interior photography for venues and properties</p>
-                </div>
 
-                <div class="service">
-                    <h2 class="text-on-background-primary">Street Photography</h2>
-                    <p class="text-on-background-primary">Urban and lifestyle photography capturing authentic moments</p>
-                </div>
+
+
             </div>
         </section>
     </body>

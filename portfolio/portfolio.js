@@ -9,7 +9,7 @@ const idStreetTab = "streetTab";
 const classHide = "hide";
 const classAll = "all";
 const classPortraiture = "portrait";
-const classEvent = "event";
+const classEvents = "events";
 const classVenue = "venue";
 const classStreet = "street";
 
@@ -98,10 +98,10 @@ const uqsla_uqnc_fright_night_list_2025_10_31 = [
 
 /* List of Portrait */
 const portrait_2025_11_27 = [
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/1.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/2.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/3.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/4.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/portrait_2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/portrait_1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/landscape_1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/landscape_2.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/5.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/6.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/7.jpg", category: "portrait" },
@@ -159,6 +159,7 @@ function populateGalleryColumns() {
         const img = document.createElement('img');
         img.src = image.src;
         img.classList.add(image.category);
+        img.addEventListener('click', () => setLightboxImage(img));
         firstGalleryColumn.appendChild(img);
     }
 
@@ -167,6 +168,7 @@ function populateGalleryColumns() {
         const img = document.createElement('img');
         img.src = image.src;
         img.classList.add(image.category);
+        img.addEventListener('click', () => setLightboxImage(img));
         secondGalleryColumn.appendChild(img);
     }
 
@@ -176,6 +178,7 @@ function populateGalleryColumns() {
         const img = document.createElement('img');
         img.src = image.src;
         img.classList.add(image.category);
+        img.addEventListener('click', () => setLightboxImage(img));
         thirdGalleryColumn.appendChild(img);
     }
 
@@ -189,7 +192,13 @@ function populateGalleryColumns() {
 }
 
 function addClassDisplay(className) {
-    listAllImages.forEach(element => {
+    const listAllImageElements = [
+        ...document.querySelectorAll('#gallery-column-1 img'),
+        ...document.querySelectorAll('#gallery-column-2 img'),
+        ...document.querySelectorAll('#gallery-column-3 img')
+    ];
+
+    listAllImageElements.forEach(element => {
         const hasClassName = element.classList.contains(className);
 
         const isAllTabSelected = className === classAll;
@@ -223,7 +232,7 @@ function showPortraitureImages() {
 }
 
 function showEventImages() {
-    addClassDisplay(classEvent);
+    addClassDisplay(classEvents);
 }
 
 function showVenueImages() {
@@ -246,5 +255,51 @@ function addAllTabEventListeners() {
     hasAddedEventListeners = true;
 }
 
+const lightbox = document.getElementById('lightbox');
+const navigationBar = document.getElementById('navigation-bar');
+
+function setLightboxImage(img) {
+    const lightboxImage = document.getElementById('lightbox-image');
+
+    lightboxImage.src = img.dataset.full || img.src;
+    lightboxImage.alt = img.alt;
+
+    lightbox.classList.add('active');
+    navigationBar.classList.add('lightbox-active');
+}
+
+function setLightboxCloseClickEventListener() {
+    document.querySelector('.lightbox-close').addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        navigationBar.classList.remove('lightbox-active');
+    });
+}
+
+function setLightboxBackDropClickEventListener() {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            navigationBar.classList.remove('lightbox-active');
+        }
+    });
+}
+
+function setLightboxEscapeKeydownEventListener() {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            navigationBar.classList.remove('lightbox-active');
+        }
+    });
+}
+
+function setLightboxCloseEventListeners() {
+   setLightboxCloseClickEventListener();
+   setLightboxBackDropClickEventListener()
+   setLightboxEscapeKeydownEventListener();
+}
+
 populateGalleryColumns();
 addAllTabEventListeners();
+
+setLightboxCloseEventListeners();
