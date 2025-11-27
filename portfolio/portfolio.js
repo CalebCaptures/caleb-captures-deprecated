@@ -98,10 +98,10 @@ const uqsla_uqnc_fright_night_list_2025_10_31 = [
 
 /* List of Portrait */
 const portrait_2025_11_27 = [
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/portrait_2.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/portrait_1.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/landscape_1.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/landscape_2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/3.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/2025_11_27_portrait/4.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/5.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/6.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/7.jpg", category: "portrait" },
