@@ -173,7 +173,6 @@ function populateGalleryColumns() {
     }
 
     for (let imageIndex = secondDivisionIndex; imageIndex < thirdDivisionIndex; imageIndex++) {
-        console.log(imageIndex);
         const image = listAllImages[imageIndex];
         const img = document.createElement('img');
         img.src = image.src;
