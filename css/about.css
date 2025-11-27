@@ -1,9 +1,9 @@
 #hero-image {
-    max-height: 700px;
+    max-height: 1000px;
     width: 100%;
 
     object-fit: cover;
-    object-position: 50% 35%;
+    object-position: 50% 40%;
 }
 
 #about-description-container {
