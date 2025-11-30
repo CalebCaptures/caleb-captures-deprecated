@@ -29,6 +29,10 @@ body {
     background-color: var(--background-primary);
 }
 
+.hide {
+    display: none;
+}
+
 button {
     font-family: gotham-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }

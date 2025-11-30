@@ -1,3 +1,7 @@
+section {
+    width: 80%;
+}
+
 .services {
     width: 100%;
     margin: 0 auto;
@@ -5,7 +9,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     flex: 1;
-    gap: 20px;
+    gap: 2rem;
     padding: 20px;
 }
 
@@ -15,4 +19,8 @@
     padding: 20px;
 
     border-radius: 1rem;
+}
+
+h2.text-on-background-primary {
+    text-align: center;
 }

@@ -30,15 +30,20 @@
 
 <section>
     <nav role="tablist">
-        <button id="allTab">All</button>
+        <button id="allTab" class="hide">All</button>
         <button id="portraitureTab">Portrait</button>
         <button id="eventTab">Events</button>
-        <button id="venueTab">Venues</button>
-        <button id="streetTab">Personal Work</button>
+        <button id="venueTab" class="hide">Venues</button>
+        <button id="personalWorkTab">Personal Work</button>
     </nav>
 
 </section>
 <section class="newSection">
+    <div id="personal-work-text" class="hide">
+        <p>
+            Some of my favourite shots I take on my own time. Prints available. Contact for sizing and prices.
+        </p>
+    </div>
     <div class="jim">
         <div class="test">
             <div id="gallery-column-1" class="test2"></div>
@@ -49,8 +54,15 @@
 </section>
 
 <div id="lightbox" class="lightbox">
-    <button class="lightbox-close" aria-label="Close">&times;</button>
-    <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    <div class="lightbox-information-and-actions">
+        <p id="lightbox-counter"></p>
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="lightbox-image-container">
+        <img id="chevron-backward" src="../images/portfolio/chevron_backward.svg" alt="Previous Image Button">
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+        <img id="chevron-forward" src="../images/portfolio/chevron_forward.svg" alt="Next Image Button">
+    </div>
 </div>
 
 <script src="portfolio.js"></script>

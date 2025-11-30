@@ -5,9 +5,9 @@ section nav[role="tablist"] {
 nav[role="tablist"] {
     display: flex;
 
-    width: 60%;
+    justify-content: center;
 
-    justify-content: space-between;
+    gap: 3rem;
 }
 
 nav[role="tablist"] button {
@@ -33,6 +33,14 @@ nav[role="tablist"] button:hover {
 
 #portfolio img {
     height: 300px;
+}
+
+.pill-active {
+    color: var(--text-navigation-selected);
+}
+
+#personal-work-text {
+    text-align: center;
 }
 
 .hide {
@@ -104,6 +112,17 @@ nav[role="tablist"] button:hover {
     visibility: visible;
 }
 
+.lightbox-image-container {
+    max-width: 90%;
+    max-height: 90%;
+
+    display: flex;
+
+    object-fit: contain;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 .lightbox-image {
     max-width: 90%;
     max-height: 90%;
@@ -111,14 +130,30 @@ nav[role="tablist"] button:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.lightbox-close {
+.lightbox-information-and-actions {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
+    top: 1rem;
+    right: 1.5rem;
+
+    display: flex;
+    gap: 1rem;
+
+}
+
+#lightbox-counter {
+    color: var(--background-navigation);
+
+    font-size: 1.5rem;
+}
+
+.lightbox-close {
+    color: var(--background-navigation);
+
+    font-size: 2rem;
+
     background: none;
     border: none;
+
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.2s ease;

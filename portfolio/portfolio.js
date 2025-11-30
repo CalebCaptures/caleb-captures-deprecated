@@ -3,7 +3,9 @@ const idAllTab = "allTab";
 const idPortraitureTab = "portraitureTab";
 const idEventTab = "eventTab";
 const idVenueTab = "venueTab";
-const idStreetTab = "streetTab";
+const idPersonalWorkTab = "personalWorkTab";
+
+const idPersonalWorkText = "personal-work-text";
 
 /* Class Constants */
 const classHide = "hide";
@@ -11,7 +13,9 @@ const classAll = "all";
 const classPortraiture = "portrait";
 const classEvents = "events";
 const classVenue = "venue";
-const classStreet = "street";
+const classPersonalWork = "personal-work";
+
+const classPillActive = "pill-active";
 
 /* List of Elements */
 
@@ -130,6 +134,14 @@ let listAllImages = [
     ...listPortraitImages,
 ]
 
+const allPills = [
+    document.getElementById(idAllTab),
+    document.getElementById(idPortraitureTab),
+    document.getElementById(idEventTab),
+    document.getElementById(idVenueTab),
+    document.getElementById(idPersonalWorkTab),
+];
+
 shuffle(listAllImages);
 
 /* Variables */
@@ -190,7 +202,7 @@ function populateGalleryColumns() {
     thirdColumnDiv.appendChild(thirdGalleryColumn);
 }
 
-function addClassDisplay(className) {
+function addClassDisplay(className, shouldReversePrimaryAction) {
     const listAllImageElements = [
         ...document.querySelectorAll('#gallery-column-1 img'),
         ...document.querySelectorAll('#gallery-column-2 img'),
@@ -203,13 +215,14 @@ function addClassDisplay(className) {
         const isAllTabSelected = className === classAll;
 
         const shouldRemoveClassHide =
-            hasClassName ||
-            isAllTabSelected;
+            (hasClassName ||
+            isAllTabSelected) &&
+            !shouldReversePrimaryAction;
 
         if (shouldRemoveClassHide) {
-            element.classList.remove(classHide);
+            shouldReversePrimaryAction ? element.classList.add(classHide) : element.classList.remove(classHide);
         } else {
-            element.classList.add(classHide);
+            shouldReversePrimaryAction ? element.classList.remove(classHide) : element.classList.add(classHide);
         }
     })
 }
@@ -222,33 +235,125 @@ function addTabEventListener(id, event) {
     });
 }
 
-function showAllImages() {
-    addClassDisplay(classAll);
+function showAllImages(pillClickedId) {
+    const currentPill = document.getElementById(pillClickedId);
+    const isPillActive = currentPill.classList.contains(classPillActive);
+
+    const shouldReversePrimaryAction = currentPill.classList.contains(classPillActive);
+
+    if (isPillActive) {
+        currentPill.classList.remove(classPillActive);
+
+    } else {
+        allPills.forEach((pill) => {
+            if (pill !== currentPill) {
+                pill.classList.remove(classPillActive);
+            }
+        });
+
+        currentPill.classList.add(classPillActive);
+    }
+    addClassDisplay(classAll, shouldReversePrimaryAction);
 }
 
-function showPortraitureImages() {
-    addClassDisplay(classPortraiture);
+function showPortraitureImages(pillClickedId) {
+    const currentPill = document.getElementById(pillClickedId);
+    const isPillActive = currentPill.classList.contains(classPillActive);
+
+    const shouldReversePrimaryAction = currentPill.classList.contains(classPillActive);
+
+    if (isPillActive) {
+        currentPill.classList.remove(classPillActive);
+    } else {
+        allPills.forEach((pill) => {
+            if (pill !== currentPill) {
+                pill.classList.remove(classPillActive);
+            }
+        });
+
+        currentPill.classList.add(classPillActive);
+    }
+    addClassDisplay(classPortraiture, shouldReversePrimaryAction);
 }
 
-function showEventImages() {
-    addClassDisplay(classEvents);
+function showEventImages(pillClickedId) {
+    const currentPill = document.getElementById(pillClickedId);
+    const isPillActive = currentPill.classList.contains(classPillActive);
+
+    const shouldReversePrimaryAction = currentPill.classList.contains(classPillActive);
+
+    if (isPillActive) {
+        currentPill.classList.remove(classPillActive);
+
+    } else {
+        allPills.forEach((pill) => {
+            if (pill !== currentPill) {
+                pill.classList.remove(classPillActive);
+            }
+        });
+
+        currentPill.classList.add(classPillActive);
+    }
+    addClassDisplay(classEvents, shouldReversePrimaryAction);
 }
 
-function showVenueImages() {
-    addClassDisplay(classVenue);
+function showVenueImages(pillClickedId) {
+    const currentPill = document.getElementById(pillClickedId);
+    const isPillActive = currentPill.classList.contains(classPillActive);
+    const shouldReversePrimaryAction = isPillActive;
+
+    if (isPillActive) {
+        currentPill.classList.remove(classPillActive);
+
+    } else {
+        allPills.forEach((pill) => {
+            if (pill !== currentPill) {
+                pill.classList.remove(classPillActive);
+            }
+        });
+
+        currentPill.classList.add(classPillActive);
+    }
+    addClassDisplay(classVenue, shouldReversePrimaryAction);
 }
 
-function showStreetImages() {
-    addClassDisplay(classStreet);
+function showPersonalWorkImages(pillClickedId) {
+    const currentPill = document.getElementById(pillClickedId);
+    const isPillActive = currentPill.classList.contains(classPillActive);
+    const shouldReversePrimaryAction = isPillActive;
+
+    const personalWorkText = document.getElementById(idPersonalWorkText);
+
+    if (isPillActive) {
+        currentPill.classList.remove(classPillActive);
+
+        personalWorkText.classList.add(classHide);
+    } else {
+        allPills.forEach((pill) => {
+            if (pill !== currentPill) {
+                pill.classList.remove(classPillActive);
+            }
+        });
+
+        currentPill.classList.add(classPillActive);
+
+        personalWorkText.classList.remove(classHide);
+    }
+    addClassDisplay(classPersonalWork, shouldReversePrimaryAction);
 }
 
 function addAllTabEventListeners() {
     if (!hasAddedEventListeners) {
-        addTabEventListener(idAllTab, showAllImages);
-        addTabEventListener(idPortraitureTab, showPortraitureImages);
-        addTabEventListener(idEventTab, showEventImages);
-        addTabEventListener(idVenueTab, showVenueImages);
-        addTabEventListener(idStreetTab, showStreetImages);
+        const allEventHandler = event => { showAllImages(idAllTab) };
+        const portraitEventHandler = event => { showPortraitureImages(idPortraitureTab) };
+        const eventEventHandler = event => { showEventImages(idEventTab) };
+        const venueEventHandler = event => { showVenueImages(idVenueTab) };
+        const personalWorkEventHandler = event => { showPersonalWorkImages(idPersonalWorkTab) };
+        addTabEventListener(idAllTab, allEventHandler);
+        addTabEventListener(idPortraitureTab, portraitEventHandler);
+        addTabEventListener(idEventTab, eventEventHandler);
+        addTabEventListener(idVenueTab, venueEventHandler);
+        addTabEventListener(idPersonalWorkTab, personalWorkEventHandler);
     }
 
     hasAddedEventListeners = true;
@@ -256,15 +361,40 @@ function addAllTabEventListeners() {
 
 const lightbox = document.getElementById('lightbox');
 const navigationBar = document.getElementById('navigation-bar');
+const lightboxCounter = document.getElementById('lightbox-counter');
+
+let listOfVisibleImages = [];
+let currentLightboxImageIndex = -1;
+
+function openLightbox() {
+    lightbox.classList.add('active');
+    navigationBar.classList.add('lightbox-active');
+}
+
+function setLightboxCounter() {
+    lightboxCounter.textContent = `${currentLightboxImageIndex + 1}/${listOfVisibleImages.length}`;
+}
 
 function setLightboxImage(img) {
+    console.log("test");
+    listOfVisibleImages = Array.from(document.querySelectorAll('.test2 img:not(.hide)'));
+    currentLightboxImageIndex = listOfVisibleImages.indexOf(img);
+
     const lightboxImage = document.getElementById('lightbox-image');
 
     lightboxImage.src = img.dataset.full || img.src;
     lightboxImage.alt = img.alt;
 
-    lightbox.classList.add('active');
-    navigationBar.classList.add('lightbox-active');
+    setLightboxCounter()
+
+    if (!lightbox.classList.contains('active')) {
+        openLightbox(lightboxImage);
+    }
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    navigationBar.classList.remove('lightbox-active');
 }
 
 function setLightboxCloseClickEventListener() {
@@ -277,25 +407,71 @@ function setLightboxCloseClickEventListener() {
 function setLightboxBackDropClickEventListener() {
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
-            lightbox.classList.remove('active');
-            navigationBar.classList.remove('lightbox-active');
+            closeLightbox();
         }
     });
 }
 
-function setLightboxEscapeKeydownEventListener() {
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            lightbox.classList.remove('active');
-            navigationBar.classList.remove('lightbox-active');
+function lightboxLoadPreviousImage(event) {
+    const isLightboxActive = lightbox.classList.contains('active')
+
+    if ((event.key === 'ArrowLeft' || event.button === 0) && isLightboxActive) {
+        const previousImageIndex = currentLightboxImageIndex - 1;
+
+        if (previousImageIndex >= 0) {
+            setLightboxImage(listOfVisibleImages[previousImageIndex]);
         }
+    }
+}
+
+function lightboxLoadNextImage(event) {
+    const isLightboxActive = lightbox.classList.contains('active')
+
+    if ((event.key === 'ArrowRight' || event.button === 0) && isLightboxActive) {
+        const nextImageIndex = currentLightboxImageIndex + 1;
+
+        if (nextImageIndex <= listOfVisibleImages.length - 1) {
+            setLightboxImage(listOfVisibleImages[nextImageIndex]);
+        }
+    }
+}
+
+function lightboxClose(event) {
+    const isLightboxActive = lightbox.classList.contains('active')
+
+    if (event.key === 'Escape' && isLightboxActive) {
+        closeLightbox();
+    }
+}
+
+
+function setLightboxNavigationEventListeners(event) {
+    lightboxLoadPreviousImage(event);
+    lightboxLoadNextImage(event);
+    lightboxClose(event);
+}
+
+function setLightboxListeners() {
+    document.addEventListener('keydown', (e) => {
+        setLightboxNavigationEventListeners(e);
+    });
+
+    const chevronBackward = document.getElementById('chevron-backward');
+    const chevronForward = document.getElementById('chevron-forward');
+
+    chevronBackward.addEventListener('mousedown', (e) => {
+        lightboxLoadPreviousImage(e);
+    });
+
+    chevronForward.addEventListener('mousedown', (e) => {
+        lightboxLoadNextImage(e);
     });
 }
 
 function setLightboxCloseEventListeners() {
    setLightboxCloseClickEventListener();
    setLightboxBackDropClickEventListener()
-   setLightboxEscapeKeydownEventListener();
+   setLightboxListeners();
 }
 
 populateGalleryColumns();
