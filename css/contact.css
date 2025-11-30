@@ -78,3 +78,12 @@
 .contact-information-label {
    margin: 0;
 }
+
+.contact-information-image-container {
+    display: flex;
+    padding: 0.25rem;
+
+    background-color: #D5F5E3;
+
+    border-radius: 0.5rem;
+}
