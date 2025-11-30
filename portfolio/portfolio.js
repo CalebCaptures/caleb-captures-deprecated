@@ -468,6 +468,40 @@ function setLightboxListeners() {
     });
 }
 
+function addLightboxFullscreenButton() {
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            // Enter fullscreen
+            lightbox.requestFullscreen().catch(err => {
+                console.error(`Fullscreen error: ${err.message}`);
+            });
+        } else {
+            // Exit fullscreen
+            document.exitFullscreen();
+        }
+    }
+
+    lightbox.addEventListener('keydown', (e) => {
+      if (e.key === 'f' || e.key === 'F') {
+          toggleFullscreen();
+      }
+    });
+
+    // Add a fullscreen button to your lightbox
+    const fullscreenBtn = document.getElementById('lightbox-fullscreen');
+    fullscreenBtn.addEventListener('click', () => {
+        toggleFullscreen();
+    });
+
+// Update button icon based on fullscreen state
+    document.addEventListener('fullscreenchange', () => {
+        fullscreenBtn.innerHTML = document.fullscreenElement ? '⛶' : '⛶';
+        // Or toggle a class for different icons
+    });
+
+    toggleFullscreen();
+}
+
 function setLightboxCloseEventListeners() {
    setLightboxCloseClickEventListener();
    setLightboxBackDropClickEventListener()
@@ -478,3 +512,4 @@ populateGalleryColumns();
 addAllTabEventListeners();
 
 setLightboxCloseEventListeners();
+addLightboxFullscreenButton();
