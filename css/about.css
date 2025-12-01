@@ -43,30 +43,10 @@ p {
 
     text-align: center;
 
-    background-color: #D5F5E3BF;
+    background-color: #D6FFBEC2;
 
     border-radius: 2rem;
 }
-
-#about-description-container-2 {
-    position: relative;
-
-    width: 25%;
-    max-height: 300px;
-
-    padding: 1rem;
-
-    top: 60%;
-    left: 62.5%;
-
-    text-align: center;
-
-    background-color: #FCEDA5BF;
-
-    border-radius: 2rem;
-}
-
-
 
 section {
    width: unset;
