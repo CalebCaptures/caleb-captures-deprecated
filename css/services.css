@@ -2,6 +2,14 @@ section {
     width: 80%;
 }
 
+p {
+    margin: 0.5rem;
+}
+
+p a {
+    color: var(--text-navigation-selected);
+}
+
 .services {
     width: 100%;
     margin: 0 auto;
@@ -22,5 +30,9 @@ section {
 }
 
 h2.text-on-background-primary {
+    text-align: center;
+}
+
+.center {
     text-align: center;
 }
