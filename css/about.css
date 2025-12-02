@@ -6,6 +6,12 @@ p {
     color: var(--text-on-background-primary);
 }
 
+p > a {
+    color: var(--text-tertiary);
+
+    text-decoration: underline;
+}
+
 #hero {
     display: grid;
 }
@@ -31,10 +37,8 @@ p {
 
     padding: 1rem;
 
-    top: 30%;
-    left: 65%;
-
-    text-align: center;
+    top: 20%;
+    left: 7.5%;
 
     background: none;
 
@@ -43,7 +47,7 @@ p {
 
 #about-description-container > p {
     color: var(--text-tertiary);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 section {
