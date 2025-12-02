@@ -43,6 +43,10 @@ nav[role="tablist"] button:hover {
     text-align: center;
 }
 
+#personal-work-contact {
+    color: var(--background-navigation);
+}
+
 .hide {
     display: none;
 }
