@@ -235,15 +235,26 @@ function addTabEventListener(id, event) {
     });
 }
 
+function hidePersonalWorkText() {
+    const personalWorkText = document.getElementById(idPersonalWorkText);
+    personalWorkText.classList.add(classHide);
+}
+
+function showPersonalWorkText() {
+    const personalWorkText = document.getElementById(idPersonalWorkText);
+    personalWorkText.classList.remove(classHide);
+}
+
 function showAllImages(pillClickedId) {
     const currentPill = document.getElementById(pillClickedId);
     const isPillActive = currentPill.classList.contains(classPillActive);
 
     const shouldReversePrimaryAction = currentPill.classList.contains(classPillActive);
 
+    hidePersonalWorkText();
+
     if (isPillActive) {
         currentPill.classList.remove(classPillActive);
-
     } else {
         allPills.forEach((pill) => {
             if (pill !== currentPill) {
@@ -261,6 +272,8 @@ function showPortraitureImages(pillClickedId) {
     const isPillActive = currentPill.classList.contains(classPillActive);
 
     const shouldReversePrimaryAction = currentPill.classList.contains(classPillActive);
+
+    hidePersonalWorkText();
 
     if (isPillActive) {
         currentPill.classList.remove(classPillActive);
@@ -282,6 +295,8 @@ function showEventImages(pillClickedId) {
 
     const shouldReversePrimaryAction = currentPill.classList.contains(classPillActive);
 
+    hidePersonalWorkText();
+
     if (isPillActive) {
         currentPill.classList.remove(classPillActive);
 
@@ -301,6 +316,8 @@ function showVenueImages(pillClickedId) {
     const currentPill = document.getElementById(pillClickedId);
     const isPillActive = currentPill.classList.contains(classPillActive);
     const shouldReversePrimaryAction = isPillActive;
+
+    hidePersonalWorkText();
 
     if (isPillActive) {
         currentPill.classList.remove(classPillActive);
@@ -328,6 +345,8 @@ function showPersonalWorkImages(pillClickedId) {
         currentPill.classList.remove(classPillActive);
 
         personalWorkText.classList.add(classHide);
+
+        hidePersonalWorkText();
     } else {
         allPills.forEach((pill) => {
             if (pill !== currentPill) {
@@ -339,6 +358,7 @@ function showPersonalWorkImages(pillClickedId) {
 
         personalWorkText.classList.remove(classHide);
     }
+
     addClassDisplay(classPersonalWork, shouldReversePrimaryAction);
 }
 
