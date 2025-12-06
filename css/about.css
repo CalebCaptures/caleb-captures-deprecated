@@ -2,10 +2,6 @@ body {
     overflow: hidden;
 }
 
-p {
-    color: var(--text-on-background-primary);
-}
-
 p > a {
     color: var(--text-tertiary);
 
@@ -45,7 +41,7 @@ p > a {
     border-radius: 2rem;
 }
 
-#about-description-container > p {
+#about-description-container > h2, p {
     color: var(--text-tertiary);
     font-size: 1.25rem;
 }
