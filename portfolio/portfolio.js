@@ -2,7 +2,7 @@
 const idAllTab = "allTab";
 const idPortraitureTab = "portraitureTab";
 const idEventTab = "eventTab";
-const idVenueTab = "venueTab";
+const idCommercialTab = "commercialTab";
 const idPersonalWorkTab = "personalWorkTab";
 
 const idPersonalWorkText = "personal-work-text";
@@ -12,7 +12,7 @@ const classHide = "hide";
 const classAll = "all";
 const classPortraiture = "portrait";
 const classEvents = "events";
-const classVenue = "venue";
+const classCommercial = "commercial";
 const classPersonalWork = "personal-work";
 
 const classPillActive = "pill-active";
@@ -119,6 +119,21 @@ const portrait_2025_11_27 = [
     { src: "../images/portfolio/portrait/2025_11_27_portrait/15.jpg", category: "portrait" }
 ];
 
+/* List of Commercial */
+const aloria_on_skydeck_at_the_star_brisbane_2025_09_17 = [
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/1.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/2.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/3.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/4.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/5.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/6.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/7.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/8.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/9.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/10.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/11.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/12.jpg", category: "commercial" }
+];
 
 /* List of Personal Work */
 const personal_work_2025_11_26 = [
@@ -138,6 +153,10 @@ const listPortraitImages = [
     ...portrait_2025_11_27,
 ];
 
+const listCommercialImages = [
+    ...aloria_on_skydeck_at_the_star_brisbane_2025_09_17,
+];
+
 const listPersonalImages = [
     ...personal_work_2025_11_26,
 ];
@@ -152,11 +171,9 @@ const allPills = [
     document.getElementById(idAllTab),
     document.getElementById(idPortraitureTab),
     document.getElementById(idEventTab),
-    document.getElementById(idVenueTab),
+    document.getElementById(idCommercialTab),
     document.getElementById(idPersonalWorkTab),
 ];
-
-shuffle(listAllImages);
 
 /* Variables */
 let hasAddedEventListeners = false;
@@ -170,18 +187,18 @@ function shuffle(array) {
     return array;
 }
 
-function populateGalleryColumns() {
+function populateGalleryColumns(listOfImagesSource) {
     const firstGalleryColumn = document.createDocumentFragment();
     const secondGalleryColumn = document.createDocumentFragment();
     const thirdGalleryColumn = document.createDocumentFragment();
 
-    const totalImages = listEventsImages.length + listPortraitImages.length;
+    const totalImages = listOfImagesSource.length;
     const firstDivisionIndex = Math.floor(totalImages / 3 - 1);
     const secondDivisionIndex = Math.floor(firstDivisionIndex * 2 - 1);
     const thirdDivisionIndex = Math.floor(firstDivisionIndex * 3 - 1);
 
     for (let imageIndex = 0; imageIndex < firstDivisionIndex; imageIndex++) {
-        const image = listAllImages[imageIndex];
+        const image = listOfImagesSource[imageIndex];
         const img = document.createElement('img');
         img.src = image.src;
         img.classList.add(image.category);
@@ -190,7 +207,7 @@ function populateGalleryColumns() {
     }
 
     for (let imageIndex = firstDivisionIndex; imageIndex < secondDivisionIndex; imageIndex++) {
-        const image = listAllImages[imageIndex];
+        const image = listOfImagesSource[imageIndex];
         const img = document.createElement('img');
         img.src = image.src;
         img.classList.add(image.category);
@@ -199,7 +216,7 @@ function populateGalleryColumns() {
     }
 
     for (let imageIndex = secondDivisionIndex; imageIndex < thirdDivisionIndex; imageIndex++) {
-        const image = listAllImages[imageIndex];
+        const image = listOfImagesSource[imageIndex];
         const img = document.createElement('img');
         img.src = image.src;
         img.classList.add(image.category);
@@ -211,9 +228,9 @@ function populateGalleryColumns() {
     const secondColumnDiv = document.getElementById('gallery-column-2');
     const thirdColumnDiv = document.getElementById('gallery-column-3');
 
-    firstColumnDiv.appendChild(firstGalleryColumn);
-    secondColumnDiv.appendChild(secondGalleryColumn);
-    thirdColumnDiv.appendChild(thirdGalleryColumn);
+    firstColumnDiv.replaceChildren(firstGalleryColumn);
+    secondColumnDiv.replaceChildren(secondGalleryColumn);
+    thirdColumnDiv.replaceChildren(thirdGalleryColumn);
 }
 
 function addClassDisplay(className, shouldReversePrimaryAction) {
@@ -289,18 +306,19 @@ function showPortraitureImages(pillClickedId) {
 
     hidePersonalWorkText();
 
-    if (isPillActive) {
-        currentPill.classList.remove(classPillActive);
-    } else {
-        allPills.forEach((pill) => {
-            if (pill !== currentPill) {
-                pill.classList.remove(classPillActive);
-            }
-        });
-
-        currentPill.classList.add(classPillActive);
-    }
-    addClassDisplay(classPortraiture, shouldReversePrimaryAction);
+    populateGalleryColumns(listPortraitImages)
+    // if (isPillActive) {
+    //     currentPill.classList.remove(classPillActive);
+    // } else {
+    //     allPills.forEach((pill) => {
+    //         if (pill !== currentPill) {
+    //             pill.classList.remove(classPillActive);
+    //         }
+    //     });
+    //
+    //     currentPill.classList.add(classPillActive);
+    // }
+    // addClassDisplay(classPortraiture, shouldReversePrimaryAction);
 }
 
 function showEventImages(pillClickedId) {
@@ -311,41 +329,44 @@ function showEventImages(pillClickedId) {
 
     hidePersonalWorkText();
 
-    if (isPillActive) {
-        currentPill.classList.remove(classPillActive);
+    populateGalleryColumns(listEventsImages);
 
-    } else {
-        allPills.forEach((pill) => {
-            if (pill !== currentPill) {
-                pill.classList.remove(classPillActive);
-            }
-        });
-
-        currentPill.classList.add(classPillActive);
-    }
-    addClassDisplay(classEvents, shouldReversePrimaryAction);
+    // if (isPillActive) {
+    //     currentPill.classList.remove(classPillActive);
+    //
+    // } else {
+    //     allPills.forEach((pill) => {
+    //         if (pill !== currentPill) {
+    //             pill.classList.remove(classPillActive);
+    //         }
+    //     });
+    //
+    //     currentPill.classList.add(classPillActive);
+    // }
+    // addClassDisplay(classEvents, shouldReversePrimaryAction);
 }
 
-function showVenueImages(pillClickedId) {
+function showCommercialImages(pillClickedId) {
     const currentPill = document.getElementById(pillClickedId);
     const isPillActive = currentPill.classList.contains(classPillActive);
     const shouldReversePrimaryAction = isPillActive;
 
     hidePersonalWorkText();
 
-    if (isPillActive) {
-        currentPill.classList.remove(classPillActive);
-
-    } else {
-        allPills.forEach((pill) => {
-            if (pill !== currentPill) {
-                pill.classList.remove(classPillActive);
-            }
-        });
-
-        currentPill.classList.add(classPillActive);
-    }
-    addClassDisplay(classVenue, shouldReversePrimaryAction);
+    populateGalleryColumns(listCommercialImages);
+    // if (isPillActive) {
+    //     currentPill.classList.remove(classPillActive);
+    //
+    // } else {
+    //     allPills.forEach((pill) => {
+    //         if (pill !== currentPill) {
+    //             pill.classList.remove(classPillActive);
+    //         }
+    //     });
+    //
+    //     currentPill.classList.add(classPillActive);
+    // }
+    // addClassDisplay(classVenue, shouldReversePrimaryAction);
 }
 
 function showPersonalWorkImages(pillClickedId) {
@@ -355,25 +376,27 @@ function showPersonalWorkImages(pillClickedId) {
 
     const personalWorkText = document.getElementById(idPersonalWorkText);
 
-    if (isPillActive) {
-        currentPill.classList.remove(classPillActive);
+    populateGalleryColumns(listPersonalImages);
 
-        personalWorkText.classList.add(classHide);
-
-        hidePersonalWorkText();
-    } else {
-        allPills.forEach((pill) => {
-            if (pill !== currentPill) {
-                pill.classList.remove(classPillActive);
-            }
-        });
-
-        currentPill.classList.add(classPillActive);
-
-        personalWorkText.classList.remove(classHide);
-    }
-
-    addClassDisplay(classPersonalWork, shouldReversePrimaryAction);
+    // if (isPillActive) {
+    //     currentPill.classList.remove(classPillActive);
+    //
+    //     personalWorkText.classList.add(classHide);
+    //
+    //     hidePersonalWorkText();
+    // } else {
+    //     allPills.forEach((pill) => {
+    //         if (pill !== currentPill) {
+    //             pill.classList.remove(classPillActive);
+    //         }
+    //     });
+    //
+    //     currentPill.classList.add(classPillActive);
+    //
+    //     personalWorkText.classList.remove(classHide);
+    // }
+    //
+    // addClassDisplay(classPersonalWork, shouldReversePrimaryAction);
 }
 
 function addAllTabEventListeners() {
@@ -381,12 +404,12 @@ function addAllTabEventListeners() {
         const allEventHandler = event => { showAllImages(idAllTab) };
         const portraitEventHandler = event => { showPortraitureImages(idPortraitureTab) };
         const eventEventHandler = event => { showEventImages(idEventTab) };
-        const venueEventHandler = event => { showVenueImages(idVenueTab) };
+        const commercialEventHandler = event => { showCommercialImages(idCommercialTab) };
         const personalWorkEventHandler = event => { showPersonalWorkImages(idPersonalWorkTab) };
         addTabEventListener(idAllTab, allEventHandler);
         addTabEventListener(idPortraitureTab, portraitEventHandler);
         addTabEventListener(idEventTab, eventEventHandler);
-        addTabEventListener(idVenueTab, venueEventHandler);
+        addTabEventListener(idCommercialTab, commercialEventHandler);
         addTabEventListener(idPersonalWorkTab, personalWorkEventHandler);
     }
 
@@ -541,7 +564,7 @@ function setLightboxCloseEventListeners() {
    setLightboxListeners();
 }
 
-populateGalleryColumns();
+populateGalleryColumns(shuffle(listAllImages));
 addAllTabEventListeners();
 
 setLightboxCloseEventListeners();
