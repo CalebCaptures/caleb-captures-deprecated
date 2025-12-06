@@ -11,15 +11,15 @@
 }
 
 @font-face {
-    font-family: montserrat;
-    src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    font-family: gotham-font;
+    src: url("../fonts/gotham_regular.otf");
 }
 
 html {
     width: 100%;
     /*margin: 0 auto;*/
 
-    font-family: montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: gotham-font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
 }
 
