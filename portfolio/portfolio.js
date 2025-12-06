@@ -194,10 +194,14 @@ function populateGalleryColumns(listOfImagesSource) {
 
     const totalImages = listOfImagesSource.length;
     const firstDivisionIndex = Math.floor(totalImages / 3 - 1);
-    const secondDivisionIndex = Math.floor(firstDivisionIndex * 2 - 1);
-    const thirdDivisionIndex = Math.floor(firstDivisionIndex * 3 - 1);
+    const secondDivisionIndex = Math.floor(firstDivisionIndex * 2 + 1);
+    const thirdDivisionIndex = Math.floor(firstDivisionIndex * 3 + 2);
 
-    for (let imageIndex = 0; imageIndex < firstDivisionIndex; imageIndex++) {
+    console.log("firstDivisionIndex: " + firstDivisionIndex);
+    console.log("secondDivisionIndex: " + secondDivisionIndex);
+    console.log("thirdDivisionIndex: " + thirdDivisionIndex);
+
+    for (let imageIndex = 0; imageIndex <= firstDivisionIndex; imageIndex++) {
         const image = listOfImagesSource[imageIndex];
         const img = document.createElement('img');
         img.src = image.src;
