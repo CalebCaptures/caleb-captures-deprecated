@@ -70,7 +70,7 @@
 
 .contact-information-section {
     display: flex;
-    margin: 1rem;
+    margin: 1rem 0 0 0;
     align-items: center;
     gap: 1rem;
 }
