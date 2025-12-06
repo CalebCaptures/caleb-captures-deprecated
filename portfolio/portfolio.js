@@ -188,9 +188,17 @@ function shuffle(array) {
 }
 
 function populateGalleryColumns(listOfImagesSource) {
-    const firstGalleryColumn = document.createDocumentFragment();
-    const secondGalleryColumn = document.createDocumentFragment();
-    const thirdGalleryColumn = document.createDocumentFragment();
+    const firstGalleryColumn = document.getElementById("gallery-column-1");
+    const secondGalleryColumn = document.getElementById("gallery-column-2");
+    const thirdGalleryColumn = document.getElementById("gallery-column-3");
+
+    const columns = [
+        firstGalleryColumn,
+        secondGalleryColumn,
+        thirdGalleryColumn,
+    ];
+
+    console.log(columns);
 
     const totalImages = listOfImagesSource.length;
     const firstDivisionIndex = Math.floor(totalImages / 3 - 1);
@@ -201,40 +209,62 @@ function populateGalleryColumns(listOfImagesSource) {
     console.log("secondDivisionIndex: " + secondDivisionIndex);
     console.log("thirdDivisionIndex: " + thirdDivisionIndex);
 
-    for (let imageIndex = 0; imageIndex <= firstDivisionIndex; imageIndex++) {
-        const image = listOfImagesSource[imageIndex];
-        const img = document.createElement('img');
+    firstGalleryColumn.innerHTML = '';
+    secondGalleryColumn.innerHTML = '';
+    thirdGalleryColumn.innerHTML = '';
+
+    listOfImagesSource.forEach((image, index) => {
+        const img = document.createElement("img");
         img.src = image.src;
         img.classList.add(image.category);
         img.addEventListener('click', () => setLightboxImage(img));
-        firstGalleryColumn.appendChild(img);
-    }
+        const columnIndex = index % 3;
+        columns[columnIndex].appendChild(img);
+    });
+    // for (let imageIndex = 0; imageIndex <= firstDivisionIndex; imageIndex++) {
+    //     console.log("imageIndex: " + imageIndex);
+    //     const image = listOfImagesSource[imageIndex];
+    //     const img = document.createElement('img');
+    //     img.src = image.src;
+    //     img.classList.add(image.category);
+    //     img.addEventListener('click', () => setLightboxImage(img));
+    //     firstGalleryColumn.appendChild(img);
+    // }
+    //
+    // for (let imageIndex = firstDivisionIndex + 1; imageIndex <= secondDivisionIndex; imageIndex++) {
+    //     console.log("imageIndex: " + imageIndex);
+    //     const image = listOfImagesSource[imageIndex];
+    //     const img = document.createElement('img');
+    //     img.src = image.src;
+    //     img.classList.add(image.category);
+    //     img.addEventListener('click', () => setLightboxImage(img));
+    //     secondGalleryColumn.appendChild(img);
+    // }
+    //
+    // for (let imageIndex = secondDivisionIndex + 1; imageIndex <= thirdDivisionIndex; imageIndex++) {
+    //
+    //     console.log("imageIndex: " + imageIndex);
+    //     const image = listOfImagesSource[imageIndex];
+    //     const img = document.createElement('img');
+    //     img.src = image.src;
+    //     img.classList.add(image.category);
+    //     img.addEventListener('click', () => setLightboxImage(img));
+    //     thirdGalleryColumn.appendChild(img);
+    // }
 
-    for (let imageIndex = firstDivisionIndex; imageIndex < secondDivisionIndex; imageIndex++) {
-        const image = listOfImagesSource[imageIndex];
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.classList.add(image.category);
-        img.addEventListener('click', () => setLightboxImage(img));
-        secondGalleryColumn.appendChild(img);
-    }
+    // const firstColumnDiv = document.getElementById('gallery-column-1');
+    // const secondColumnDiv = document.getElementById('gallery-column-2');
+    // const thirdColumnDiv = document.getElementById('gallery-column-3');
+    //
+    // firstColumnDiv.replaceChildren(firstGalleryColumn);
+    // secondColumnDiv.replaceChildren(secondGalleryColumn);
+    // thirdColumnDiv.replaceChildren(thirdGalleryColumn);
 
-    for (let imageIndex = secondDivisionIndex; imageIndex < thirdDivisionIndex; imageIndex++) {
-        const image = listOfImagesSource[imageIndex];
-        const img = document.createElement('img');
-        img.src = image.src;
-        img.classList.add(image.category);
-        img.addEventListener('click', () => setLightboxImage(img));
-        thirdGalleryColumn.appendChild(img);
-    }
-
-    const firstColumnDiv = document.getElementById('gallery-column-1');
-    const secondColumnDiv = document.getElementById('gallery-column-2');
-    const thirdColumnDiv = document.getElementById('gallery-column-3');
-
-    firstColumnDiv.replaceChildren(firstGalleryColumn);
-    secondColumnDiv.replaceChildren(secondGalleryColumn);
-    thirdColumnDiv.replaceChildren(thirdGalleryColumn);
+    // firstGalleryColumn.replaceChildren(columns[0].children);
+    // secondGalleryColumn.replaceChildren(columns[1].children);
+    // thirdGalleryColumn.replaceChildren(columns[2].children);
+    // setLightboxCloseEventListeners();
+    // addLightboxFullscreenButton();
 }
 
 function addClassDisplay(className, shouldReversePrimaryAction) {
@@ -571,5 +601,5 @@ function setLightboxCloseEventListeners() {
 populateGalleryColumns(shuffle(listAllImages));
 addAllTabEventListeners();
 
-setLightboxCloseEventListeners();
-addLightboxFullscreenButton();
+// setLightboxCloseEventListeners();
+// addLightboxFullscreenButton();
