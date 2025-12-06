@@ -47,6 +47,8 @@
 .contact-form form button {
     height: 50px;
 
+    font-weight: 700;
+
     border: none;
     background-color: #AFF9CF;
     color: #3D3226;
