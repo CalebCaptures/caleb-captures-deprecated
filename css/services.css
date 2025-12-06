@@ -29,6 +29,10 @@ p a {
     border-radius: 1rem;
 }
 
+.text-on-background-primary {
+    font-weight: 300;
+}
+
 h2.text-on-background-primary {
     text-align: center;
 }
