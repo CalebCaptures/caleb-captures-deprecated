@@ -601,5 +601,5 @@ function setLightboxCloseEventListeners() {
 populateGalleryColumns(shuffle(listAllImages));
 addAllTabEventListeners();
 
-// setLightboxCloseEventListeners();
-// addLightboxFullscreenButton();
+setLightboxCloseEventListeners();
+addLightboxFullscreenButton();
