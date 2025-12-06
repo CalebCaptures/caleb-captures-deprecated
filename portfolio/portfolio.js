@@ -118,21 +118,35 @@ const portrait_2025_11_27 = [
     { src: "../images/portfolio/portrait/2025_11_27_portrait/14.jpg", category: "portrait" },
     { src: "../images/portfolio/portrait/2025_11_27_portrait/15.jpg", category: "portrait" }
 ];
+
+
+/* List of Personal Work */
+const personal_work_2025_11_26 = [
+    { src: "../images/portfolio/personal_work/2025_11_26/1.jpg", category: "personal-work" },
+    { src: "../images/portfolio/personal_work/2025_11_26/2.jpg", category: "personal-work" },
+    { src: "../images/portfolio/personal_work/2025_11_26/3.jpg", category: "personal-work" },
+];
+
 const listEventsImages = [
     ...qpsa_pharmacy_ball_2025_09_06,
     ...uqba_uqmas_marketing_panel_2025_10_08,
     ...uqdance_ball_2025_10_11,
     ...uqsla_uqnc_fright_night_list_2025_10_31
-]
+];
 
 const listPortraitImages = [
     ...portrait_2025_11_27,
-]
+];
+
+const listPersonalImages = [
+    ...personal_work_2025_11_26,
+];
 
 let listAllImages = [
     ...listEventsImages,
     ...listPortraitImages,
-]
+    ...listPersonalImages,
+];
 
 const allPills = [
     document.getElementById(idAllTab),
@@ -396,7 +410,6 @@ function setLightboxCounter() {
 }
 
 function setLightboxImage(img) {
-    console.log("test");
     listOfVisibleImages = Array.from(document.querySelectorAll('.test2 img:not(.hide)'));
     currentLightboxImageIndex = listOfVisibleImages.indexOf(img);
 
