@@ -34,6 +34,7 @@ p a {
 }
 
 h2.text-on-background-primary {
+    font-weight: 400;
     text-align: center;
 }
 
