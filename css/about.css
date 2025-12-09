@@ -50,12 +50,23 @@ p > a {
     border-radius: 2rem;
 }
 
-#about-description-container > h2, p {
+
+
+#about-description-container > p {
     color: var(--text-tertiary);
     font-size: 1.25rem;
 
     font-weight: 200;
 }
+
+#about-heading {
+    color: var(--text-tertiary);
+
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
 
 section {
     width: unset;
