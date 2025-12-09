@@ -33,7 +33,10 @@
                 <div class="contact-form">
                     <h2 class="text-on-background-primary">get in touch here</h2>
 
-                    <form>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="a29e325d-763f-41de-951f-aeadfa94b038">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
+
                         <label>
                             <input type="text" name="name" placeholder="name"/>
                         </label>
@@ -86,5 +89,23 @@
                 </div>
             </div>
         </section>
+
+
+        <script>
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener('submit', function(e) {
+
+                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+                if (!hCaptcha) {
+                    e.preventDefault();
+                    alert("Please fill out captcha field")
+                }
+            });
+        </script>
+
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+
     </body>
 </html>
