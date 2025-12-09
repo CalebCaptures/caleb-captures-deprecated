@@ -50,8 +50,6 @@ p > a {
     border-radius: 2rem;
 }
 
-
-
 #about-description-container > p {
     color: var(--text-tertiary);
     font-size: 1.25rem;
@@ -66,22 +64,7 @@ p > a {
     font-weight: 400;
 }
 
-
-
 section {
     width: unset;
     margin: unset;
 }
-
-/*@media (min-width: 1080px) {*/
-/*    #hero-image {*/
-/*        max-width: 1080px;*/
-/*        max-height: 1920px;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 1440px) {*/
-/*    #hero-image {*/
-/*        max-width: 1440px;*/
-/*        max-height: 2560px;*/
-/*    }*/
-/*}*/

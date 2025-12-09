@@ -48,8 +48,8 @@ function validateContactForm() {
         if (!subject.trim()) {
             return 'Subject is required';
         }
-        if (subject.trim().length < 3) {
-            return 'Subject must be at least 3 characters';
+        if (subject.trim().length < 2) {
+            return 'Subject must be at least 1 characters';
         }
         return null;
     }
@@ -58,7 +58,7 @@ function validateContactForm() {
         if (!message.trim()) {
             return 'Message is required';
         }
-        if (message.trim().length < 10) {
+        if (message.trim().length < 5) {
             return 'Message must be at least 10 characters';
         }
         if (message.length > 5000) {
@@ -141,7 +141,6 @@ function validateContactForm() {
         hasErrors = true;
     }
 
-    // If there are errors, focus on first error and stop
     if (hasErrors) {
         const firstError = document.querySelector('.error-message');
         if (firstError) {
@@ -150,7 +149,6 @@ function validateContactForm() {
         return false;
     }
 
-    // Your Web3Forms submission code would go here
     return true;
 }
 
