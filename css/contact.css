@@ -4,8 +4,9 @@
 }
 
 .contact-form {
+    max-height: 700px;
     width: 500px;
-    height: 600px;
+    height: 700px;
     padding: 20px;
 
     display: flex;
@@ -22,6 +23,11 @@
     flex-direction: column;
     flex: 1;
     justify-content: space-between;
+}
+
+.contact-form label {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-form form label input {
@@ -88,4 +94,21 @@
     background-color: #D5F5E3;
 
     border-radius: 0.5rem;
+}
+
+#send-message {
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#contact-form-submission-message {
+    text-align: center;
+    color: #3D3226;
+}
+
+.error-message {
+    /*margin: 0.5rem;*/
+    font-weight: 300;
+    color: #C44536;
 }

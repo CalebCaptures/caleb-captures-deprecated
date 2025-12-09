@@ -33,13 +33,16 @@
                 <div class="contact-form">
                     <h2 class="text-on-background-primary">get in touch here</h2>
 
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="a29e325d-763f-41de-951f-aeadfa94b038">
+                    <form id="contact-form">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
+
+                        <div id="name-error" class="error-message hide">name is required</div>
 
                         <label>
                             <input type="text" name="name" placeholder="name"/>
                         </label>
+
+                        <div id="email-error" class="error-message hide">e-mail is required</div>
 
                         <label>
                             <input type="text" name="email" placeholder="e-mail"/>
@@ -49,16 +52,22 @@
                             <input type="text" name="budget" placeholder="budget"/>
                         </label>
 
+                        <div id="subject-error" class="error-message hide">subject is required</div>
+
                         <label>
                             <input type="text" name="subject" placeholder="subject"/>
                         </label>
+
+                        <div id="message-error" class="error-message hide">message is required</div>
 
                         <label>
                             <textarea name="message" placeholder="message" rows="6"></textarea>
                         </label>
 
-                        <button>send message</button>
+                        <button id="send-message">send message</button>
                     </form>
+
+                    <h3 id="contact-form-submission-message" class="hide">thanks! message received</h3>
 
                 </div>
 
@@ -90,22 +99,8 @@
             </div>
         </section>
 
-
-        <script>
-            const form = document.getElementById("contact-form");
-
-            form.addEventListener('submit', function(e) {
-
-                const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-
-                if (!hCaptcha) {
-                    e.preventDefault();
-                    alert("Please fill out captcha field")
-                }
-            });
-        </script>
-
         <script src="https://web3forms.com/client/script.js" async defer></script>
+        <script src="contact.js"></script>
 
     </body>
 </html>

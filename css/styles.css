@@ -170,3 +170,7 @@ h1, h2, h3, p {
     width: 10rem;
     height: 100%;
 }
+
+.hide {
+    display: none;
+}
