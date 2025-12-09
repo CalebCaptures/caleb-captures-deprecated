@@ -2,6 +2,10 @@ body {
     overflow: hidden;
 }
 
+p {
+    margin: 0.5rem 0 0.5rem 0 ;
+}
+
 p > a {
     color: var(--text-tertiary);
 
@@ -18,8 +22,11 @@ p > a {
 #hero-image {
     position: absolute;
 
-    width: 100vw;
+    width: 119vw;
     height: 150vh;
+
+    top: -5%;
+    left: -19%;
 
     object-fit: cover;
 }
@@ -27,16 +34,18 @@ p > a {
 #about-description-container {
     position: relative;
 
+    display: grid;
+
     max-height: 650px;
 
     width: 25%;
 
     padding: 1rem;
 
-    top: 20%;
-    left: 67.5%;
+    top: 35%;
+    left: 65%;
 
-    background-color: #000000D9;
+    background-color: #0000007A;
 
     border-radius: 2rem;
 }
@@ -44,10 +53,24 @@ p > a {
 #about-description-container > h2, p {
     color: var(--text-tertiary);
     font-size: 1.25rem;
+
+    font-weight: 200;
 }
 
 section {
     width: unset;
     margin: unset;
-
 }
+
+/*@media (min-width: 1080px) {*/
+/*    #hero-image {*/
+/*        max-width: 1080px;*/
+/*        max-height: 1920px;*/
+/*    }*/
+/*}*/
+/*@media (min-width: 1440px) {*/
+/*    #hero-image {*/
+/*        max-width: 1440px;*/
+/*        max-height: 2560px;*/
+/*    }*/
+/*}*/
