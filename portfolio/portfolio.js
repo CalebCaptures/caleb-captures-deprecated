@@ -100,6 +100,13 @@ const uqsla_uqnc_fright_night_list_2025_10_31 = [
     { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06946.jpg", category: "events" }
 ];
 
+
+const example_2026_01_06 = [
+    { src: "../images/portfolio/events/2026_01_06_example/1.jpg", category: "events" },
+    { src: "../images/portfolio/events/2026_01_06_example/2.jpg", category: "events" },
+    { src: "../images/portfolio/events/2026_01_06_example/3.jpg", category: "events" }
+];
+
 /* List of Portrait */
 const portrait_2025_11_27 = [
     { src: "../images/portfolio/portrait/2025_11_27_portrait/1.jpg", category: "portrait" },

@@ -1,5 +1,8 @@
 section nav[role="tablist"] {
-    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    /*margin: 1rem auto;*/
 }
 
 nav[role="tablist"] {
@@ -11,7 +14,6 @@ nav[role="tablist"] {
 }
 
 nav[role="tablist"] button {
-    width: 18%;
     height: 3rem;
     border-radius: 2rem;
 
@@ -29,7 +31,9 @@ nav[role="tablist"] button:hover {
 
 #portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /*grid-template-columns: minmax(200px, 600px);*/
     gap: 20px;
     padding: 20px;
 }
@@ -55,9 +59,10 @@ nav[role="tablist"] button:hover {
 }
 
 .test {
-    display: flex;
-    justify-content: space-around; /* centres items horizontally */
-    gap: 0.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 .test2 {
@@ -191,4 +196,10 @@ nav[role="tablist"] button:hover {
     border-radius: 1rem;
 
     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .test {
+        grid-template-columns: 1fr;
+    }
 }
