@@ -14,6 +14,29 @@
 
 <body>
 
+<nav id="navigation-bar" role="navigation">
+    <div id="navigation-bar-outer">
+        <div id="mobile-navigation-bar">
+            <a id="home-button" href="../">
+                <img src="../images/navigation/caleb_captures.svg" class="home-image" alt="Home Button">
+            </a>
+
+            <button id="mobile-menu-item-button" onclick="toggleNavigationMenu()">
+                <img id="menu-button" src="../images/navigation/menu.svg" alt="Menu Button"/>
+            </button>
+        </div>
+
+        <div id="navigation-bar-content">
+            <ul class="navigation-list">
+                <li><a href="">portfolio</a></li>
+                <li><a href="../services/">services</a></li>
+
+                <li><a href="../about/">about</a></li>
+                <li><a href="../contact/">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <section>
     <nav role="tablist">
@@ -53,6 +76,7 @@
 </div>
 
 <script src="portfolio.js"></script>
+<script src="../navigation.js"></script>
 </body>
 
 </html>

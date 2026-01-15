@@ -13,21 +13,29 @@
     </head>
 
     <body>
-        <nav id="navigation-bar" role="navigation">
-            <div>
-                <ul class="navigation-list">
-                    <li><a href="../portfolio/">portfolio</a></li>
-                    <li><a href="../services/">services</a></li>
-                    <li>
-                        <a id="home-button" href="../">
-                            <img src="../images/navigation/caleb_captures.svg" class="home-image" alt="Home Button">
-                        </a>
-                    </li>
-                    <li><a href="../about/">about</a></li>
-                    <li><a href="" class="navigation-selected">contact</a></li>
-                </ul>
-            </div>
-        </nav>
+               <nav id="navigation-bar" role="navigation">
+    <div id="navigation-bar-outer">
+        <div id="mobile-navigation-bar">
+            <a id="home-button" href="../">
+                <img src="../images/navigation/caleb_captures.svg" class="home-image" alt="Home Button">
+            </a>
+
+            <button id="mobile-menu-item-button" onclick="toggleNavigationMenu()">
+                <img id="menu-button" src="../images/navigation/menu.svg" alt="Menu Button"/>
+            </button>
+        </div>
+
+        <div id="navigation-bar-content">
+            <ul class="navigation-list">
+                <li><a href="../portfolio/">portfolio</a></li>
+                <li><a href="../services/">services</a></li>
+
+                <li><a href="../about/">about</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
         <section>
             <div class="contact-content">
@@ -103,5 +111,6 @@
         <script src="https://web3forms.com/client/script.js" async defer></script>
         <script src="contact.js"></script>
 
+        <script src="../navigation.js"></script>
     </body>
 </html>

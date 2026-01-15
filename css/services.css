@@ -1,7 +1,3 @@
-section {
-    width: 80%;
-}
-
 p {
     margin: 0.5rem;
 }
@@ -18,13 +14,10 @@ p a {
 
     flex: 1;
     gap: 2rem;
-    padding: 20px;
 }
 
 .service {
     background-color: #D5F5E3;
-
-    padding: 20px;
 
     border-radius: 1rem;
 }
@@ -40,4 +33,20 @@ h2.text-on-background-primary {
 
 .center {
     text-align: center;
+}
+
+@media screen and (max-width: 1180px) {
+    section {
+        margin-top: 1rem;
+    }
+    .services {
+    }
+
+    .service {
+        width: 95%;
+        padding: 0;
+        margin: auto;
+
+        font-size: 0.8em;
+    }
 }

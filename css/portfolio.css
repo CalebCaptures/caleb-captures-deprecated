@@ -202,4 +202,14 @@ nav[role="tablist"] button:hover {
     .test {
         grid-template-columns: 1fr;
     }
+
+    .newSection {
+        margin: 2rem auto;
+    }
+
+    .lightbox-image-container {
+        margin-inline: auto;
+        justify-content: center;
+        align-items: center;
+    }
 }

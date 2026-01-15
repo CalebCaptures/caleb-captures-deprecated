@@ -16,20 +16,28 @@
 
 <body>
     <nav id="navigation-bar" role="navigation">
-        <div>
+    <div id="navigation-bar-outer">
+        <div id="mobile-navigation-bar">
+            <a id="home-button" href="../">
+                <img src="../images/navigation/caleb_captures.svg" class="home-image" alt="Home Button">
+            </a>
+
+            <button id="mobile-menu-item-button" onclick="toggleNavigationMenu()">
+                <img id="menu-button" src="../images/navigation/menu.svg" alt="Menu Button"/>
+            </button>
+        </div>
+
+        <div id="navigation-bar-content">
             <ul class="navigation-list">
                 <li><a href="../portfolio/">portfolio</a></li>
                 <li><a href="../services/">services</a></li>
-                <li>
-                    <a id="home-button" href="../">
-                        <img src="../images/navigation/caleb_captures.svg" class="home-image" alt="Home Button">
-                    </a>
-                </li>
-                <li><a href="" class="navigation-selected">about</a></li>
+
+                <li><a href="">about</a></li>
                 <li><a href="../contact/">contact</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <section id="hero">
         <div class="hero-image-container">
@@ -44,6 +52,8 @@
             <p>If you’re interested in booking a session, reach out via the <a href="../contact/">contact</a> page and we can have a quick chat.</p>
         </div>
     </section>
+
+    <script src="../navigation.js"></script>
 </body>
 
 </html>
