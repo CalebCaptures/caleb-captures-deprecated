@@ -10,6 +10,11 @@ h2 {
     color: var(--text-secondary);
 }
 
+#caleb-captures-overview-container :is(h2, p) {
+    font-size: 0.8em;
+
+}
+
 #hero {
     width: 90%;
     margin: 0 auto;
