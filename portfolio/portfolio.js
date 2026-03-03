@@ -21,109 +21,211 @@ const classPillActive = "pill-active";
 
 /* List of Photos */
 /* Events */
-const qpsa_pharmacy_ball_2025_09_06 = [
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC00904.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC00957.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC00961.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC00962.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01024.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01057.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01065.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01079.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01106.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01113.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01124.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01125.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01147.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01162.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01179.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_09_06_qpsa_pharmacy_ball/DSC01207.jpg", category: "events" }
+const uq_dance_ball_11_10_25 = [
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00057.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00074.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00137.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00334.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00350.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00373.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00412.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00493.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00589.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00642.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00661.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00794.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00813.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC00907.jpg", category: "events" },
+    { src: "../images/portfolio/events/11-10-25-UQDANCE-Ball-upload/DSC09938.jpg", category: "events" }
 ];
 
-const uqba_uqmas_marketing_panel_2025_10_08 = [
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08647.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08650.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08686.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08690.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08697.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08785.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08880.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08899.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08920.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC08928.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC09039.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC09101.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC09174.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC09181.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_08_uqba_uqmas_marketing_panel/DSC09247.jpg", category: "events" }
+const uq_cesa_graduation_party_25_11_21 = [
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-1.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-10.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-11.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-2.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-3.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-4.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-5.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-6.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-7.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-8.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-21-UQCESA-Graduation-Party-SMP-exports/25-11-21-UQCESA-GRADUATION-PARTY-SMP-9.jpg", category: "events" }
 ];
 
-const uqdance_ball_2025_10_11 = [
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00026.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00057.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00074.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00125.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00137.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00236.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00334.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00350.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00373.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00412.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00493.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00589.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00642.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00661.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00794.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00813.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC00907.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_11_uqdance_ball/DSC09938.jpg", category: "events" }
+const uq_ppes_valedictory_dinner_25_11_22 = [
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-1.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-10.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-11.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-2.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-3.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-4.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-5.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-6.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-7.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-8.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-22-Valedictory-Dinner-UQPPES-SMP-exports/25-11-22-Valedictory-Dinner-UQPPES-SMP-9.jpg", category: "events" }
 ];
 
-const uqsla_uqnc_fright_night_list_2025_10_31 = [
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC05931.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC05944.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC05971.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06007.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06078.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06099.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06132.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06215.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06319.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06431.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06480.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06578.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06655.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06729.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06739.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06847.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06872.jpg", category: "events" },
-    { src: "../images/portfolio/events/2025_10_31_uqsla_uqnc_fright_night/DSC06946.jpg", category: "events" }
+const qbf_finance_group_christmas_party_25_11_28 = [
+    { src: "../images/portfolio/events/25-11-28-QBF-Finance-Group-Christmas-Party-SMP-exportrs/25-11-28-QBF-Finance-Group-Christmas-Party-SMP-1.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-QBF-Finance-Group-Christmas-Party-SMP-exportrs/25-11-28-QBF-Finance-Group-Christmas-Party-SMP-2.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-QBF-Finance-Group-Christmas-Party-SMP-exportrs/25-11-28-QBF-Finance-Group-Christmas-Party-SMP-3.jpg", category: "events" }
 ];
 
+const sbmss_sass_end_of_year_awards_night_25_11_28 = [
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-1.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-10.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-2.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-3.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-4.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-5.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-6.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-7.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-8.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---exp/25-11-28-SBMS-SASS-School-of-Biomedical-Sciences-Student-and-Academic-Social-Society---End-of-Year-Awards-Night---SMP-9.jpg", category: "events" }
+];
 
-const example_2026_01_06 = [
-    { src: "../images/portfolio/events/2026_01_06_example/1.jpg", category: "events" },
-    { src: "../images/portfolio/events/2026_01_06_example/2.jpg", category: "events" },
-    { src: "../images/portfolio/events/2026_01_06_example/3.jpg", category: "events" }
+const uq_namsa_graduation_evening_25_12_16 = [
+    { src: "../images/portfolio/events/25-12-16-UQNAMSA-Graduation-Evening-SMP-exports/25-12-16-UQNAMSA-Graduation-Evening-SMP-1.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-12-16-UQNAMSA-Graduation-Evening-SMP-exports/25-12-16-UQNAMSA-Graduation-Evening-SMP-2.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-12-16-UQNAMSA-Graduation-Evening-SMP-exports/25-12-16-UQNAMSA-Graduation-Evening-SMP-3.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-12-16-UQNAMSA-Graduation-Evening-SMP-exports/25-12-16-UQNAMSA-Graduation-Evening-SMP-4.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-12-16-UQNAMSA-Graduation-Evening-SMP-exports/25-12-16-UQNAMSA-Graduation-Evening-SMP-5.jpg", category: "events" },
+    { src: "../images/portfolio/events/25-12-16-UQNAMSA-Graduation-Evening-SMP-exports/25-12-16-UQNAMSA-Graduation-Evening-SMP-6.jpg", category: "events" }
+];
+
+const day_2_on_set_for_her_hour = [
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05025.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05084.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05192.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05196.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05330.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05357.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05366.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05371.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05410.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05484.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05574.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05592.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05602.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05691.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05766.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05784.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05812.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05823.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05834.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05850.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05855.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05879.jpg", category: "events" },
+    { src: "../images/portfolio/events/Day-2,-on-set-for-_Her-Hour_/DSC05898.jpg", category: "events" }
+];
+
+const qpsa_pharmacy_ball_25_09_06 = [
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC00957.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC00961.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC00962.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC01057.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC01065.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC01147.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC01162.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC01179.jpg", category: "events" },
+    { src: "../images/portfolio/events/QPSA-Pharmacy-Ball-06-09-25/DSC01207.jpg", category: "events" }
+];
+
+const uq_ba_mas_marketing_panel_25_10_08 = [
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08647.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08650.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08690.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08785.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08880.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08899.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC08920.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC09039.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC09101.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC09174.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC09181.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQBA-x-UQMAS-Markeeting-Panel-08-10-25/DSC09247.jpg", category: "events" }
+];
+
+const uq_sla_nc_fright_night_25_10_31= [
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC05931.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06007.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06078.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06099.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06215.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06319.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06480.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06578.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06655.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06739.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06847.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06872.jpg", category: "events" },
+    { src: "../images/portfolio/events/UQSLA-x-UQNC-Fright-Night-31-10-25/DSC06946.jpg", category: "events" }
+];
+
+const wedding_shontay_ben = [
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01413.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01519.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01534.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01554.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01612.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01726.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01875.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01892.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01913.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01956.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC01991.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02016.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02026.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02030.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02140.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02240.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02261.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02341.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02366.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02438.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02464.jpg", category: "events" },
+    { src: "../images/portfolio/events/wedding-shontay-+-ben/DSC02489.jpg", category: "events" }
 ];
 
 /* List of Portrait */
-const portrait_2025_11_27 = [
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/1.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/2.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/3.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/4.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/5.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/6.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/7.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/8.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/9.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/10.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/11.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/12.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/13.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/14.jpg", category: "portrait" },
-    { src: "../images/portfolio/portrait/2025_11_27_portrait/15.jpg", category: "portrait" }
+const portrait = [
+    { src: "../images/portfolio/portrait/Aylish--1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Aylish--6.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/belle1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/belle2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/boatportrait1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Bree-Lillian-fuel-portraits--09.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Bree-Lillian-fuel-portraits--12.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Bree-Lillian-fuel-portraits--22.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Bree-Lillian-fuel-portraits--23.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/cleb-26-1-17-street-portraits-Anisha-Mahato-1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/cleb-26-1-17-street-portraits-Anisha-Mahato-2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/cleb-26-1-17-street-portraits-Anisha-Mahato-3.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/cleb-26-1-17-street-portraits-Anisha-Mahato-5.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/cleb-26-1-17-street-portraits-Anisha-Mahato-7.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/dr1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Ellie-Fink-5star-11.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Ellie-Fink-cleb-upload-01.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Ellie-Fink-cleb-upload-09.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Hailey-Lee-in-the-Park-13.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Hailey-Lee-in-the-Park-20.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Hailey-Lee-in-the-Park-33.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/Hailey-Lee-in-the-Park-38.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/J-crab-westside-studio-tattoo-05.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/J-crab-westside-studio-tattoo-07.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/J-crab-westside-studio-tattoo-14.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/J-crab-westside-studio-tattoo-16.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/liz1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/liz2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/liz3.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/nina-wylie-shoot1-02.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/nina-wylie-shoot1-04.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/nina-wylie-shoot1-07.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/yuen-grad-1.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/yuen-grad-2.jpg", category: "portrait" },
+    { src: "../images/portfolio/portrait/yuen-grad-3(alyssa).jpg", category: "portrait" }
 ];
 
 /* List of Commercial */
@@ -142,6 +244,65 @@ const aloria_on_skydeck_at_the_star_brisbane_2025_09_17 = [
     { src: "../images/portfolio/commercial/2025_09_17_aloria_on_skydeck_at_the_star_brisbane/12.jpg", category: "commercial" }
 ];
 
+const aloria_on_skydeck_star_brisbane = [
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/1.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/10.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/11.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/12.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/2-(2).jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/3-(2).jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/4.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/5.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/6.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/7.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/8-(2).jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Aloria-on-Skydeck---The-Star/9.jpg", category: "commercial" }
+];
+
+const azteca_food_star_brisbane_26_01_08 = [
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-1.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-10.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-2.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-3.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-4.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-5.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-6.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-7.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-8.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/Azteca---The-Star-Brisbane/26-01-08-Azteca-food-9.jpg", category: "commercial" }
+];
+
+const raven_hotel_comedy_cellar_night_26_02_13 = [
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-1.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-10.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-16.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-27.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-3.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-31.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-38.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-41.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-43.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-46.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-60.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-13-Raven-Hotel-(Brisbane-Comedy-Cellar)---headliner-Jaimeson-Gilders-9.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-01.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-05.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-14.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-22.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-24.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-27.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-29.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-31.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/26-02-14-standup-Comedy-Event-Kevin-Lim---The-Raven-Hotel-Comedy-Cellar---Tony-Lathouras-40.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-17.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-18.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-30.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-33.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-41.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-42.jpg", category: "commercial" },
+    { src: "../images/portfolio/commercial/The-Raven-Hotel---Comedy-Cellar-night/Raven-Hotel-(Brisbane-Comedy-Cellar)-Aaron-Pratt-and-friends---A-cellar-showcase-47.jpg", category: "commercial" }
+];
+
 /* List of Personal Work */
 const personal_work_2025_11_26 = [
     { src: "../images/portfolio/personal_work/2025_11_26/1.jpg", category: "personal-work" },
@@ -150,18 +311,28 @@ const personal_work_2025_11_26 = [
 ];
 
 const listEventsImages = [
-    ...qpsa_pharmacy_ball_2025_09_06,
-    ...uqba_uqmas_marketing_panel_2025_10_08,
-    ...uqdance_ball_2025_10_11,
-    ...uqsla_uqnc_fright_night_list_2025_10_31
+    ...uq_dance_ball_11_10_25,
+    ...uq_cesa_graduation_party_25_11_21,
+    ...uq_ppes_valedictory_dinner_25_11_22,
+    ...qbf_finance_group_christmas_party_25_11_28,
+    ...sbmss_sass_end_of_year_awards_night_25_11_28,
+    ...uq_namsa_graduation_evening_25_12_16,
+    ...day_2_on_set_for_her_hour,
+    ...qpsa_pharmacy_ball_25_09_06,
+    ...uq_ba_mas_marketing_panel_25_10_08,
+    ...uq_sla_nc_fright_night_25_10_31,
+    ...wedding_shontay_ben,
 ];
 
 const listPortraitImages = [
-    ...portrait_2025_11_27,
+    ...portrait,
 ];
 
 const listCommercialImages = [
     ...aloria_on_skydeck_at_the_star_brisbane_2025_09_17,
+    ...aloria_on_skydeck_star_brisbane,
+    ...azteca_food_star_brisbane_26_01_08,
+    ...raven_hotel_comedy_cellar_night_26_02_13,
 ];
 
 const listPersonalImages = [
