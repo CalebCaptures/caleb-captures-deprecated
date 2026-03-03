@@ -11,13 +11,18 @@ p a {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: stretch;
 
     flex: 1;
     gap: 2rem;
 }
 
 .service {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background-color: #D5F5E3;
+    padding: 1rem;
 
     border-radius: 1rem;
 }
@@ -39,14 +44,9 @@ h2.text-on-background-primary {
     section {
         margin-top: 1rem;
     }
+
     .services {
-    }
-
-    .service {
-        width: 95%;
-        padding: 0;
-        margin: auto;
-
-        font-size: 0.8em;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 4rem;
     }
 }
