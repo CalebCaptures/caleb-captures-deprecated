@@ -634,9 +634,20 @@ function handleHashChange() {
     if (targetId) {
         const targetButton = document.getElementById(targetId);
         if (targetButton && !targetButton.classList.contains('hide')) {
-            // Trigger the click handler for this tab
-            const clickEvent = new Event('click');
-            targetButton.dispatchEvent(clickEvent);
+            // Call the appropriate show function directly based on button ID
+            if (targetId === idAllTab) {
+                showAllImages(idAllTab);
+            } else if (targetId === idPortraitureTab) {
+                showPortraitureImages(idPortraitureTab);
+            } else if (targetId === idEventTab) {
+                showEventImages(idEventTab);
+            } else if (targetId === idCommercialTab) {
+                showCommercialImages(idCommercialTab);
+            } else if (targetId === idPersonalWorkTab) {
+                showPersonalWorkImages(idPersonalWorkTab);
+            }
+            // Update hash to ensure URL consistency
+            updateHash(hash);
         }
     }
 }
