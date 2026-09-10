@@ -23,10 +23,33 @@ nav[role="tablist"] button {
     background-color: var(--background-navigation);
     border-color: var(--background-navigation);
     border-width: 0;
+
+    padding: 0;
+    overflow: hidden;
 }
 
 nav[role="tablist"] button:hover {
     cursor: pointer;
+}
+
+nav[role="tablist"] button a.tab-anchor {
+    display: block;
+    height: 100%;
+    padding: 0 1.5rem;
+    color: var(--text-navigation-unselected);
+    background-color: var(--background-navigation);
+    text-decoration: none;
+    font-size: medium;
+    line-height: 3rem;
+    text-align: center;
+}
+
+nav[role="tablist"] button a.tab-anchor:hover {
+    cursor: pointer;
+}
+
+nav[role="tablist"] button a.tab-anchor:visited {
+    color: var(--text-navigation-unselected);
 }
 
 #portfolio {
@@ -100,6 +123,30 @@ nav[role="tablist"] button:hover {
 .jim {
     width: 99%;
     margin: 0 auto;
+}
+
+/* Portfolio sub-heading anchor links */
+.portfolio-subheading {
+    height: 3rem;
+    margin: 0.5rem 1rem;
+    padding: 0 1.5rem;
+    background-color: var(--background-navigation);
+    color: var(--text-navigation-unselected);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.portfolio-subheading:hover {
+    cursor: pointer;
+}
+
+.portfolio-subheading:visited {
+    color: var(--text-navigation-unselected);
 }
 
 /* Lightbox */

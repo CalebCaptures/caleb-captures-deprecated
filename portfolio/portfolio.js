@@ -353,6 +353,16 @@ const allPills = [
     document.getElementById(idPersonalWorkTab),
 ];
 
+/* Filter mapping for hash-based navigation */
+const filterByHash = {
+    "": idAllTab,
+    "all": idAllTab,
+    "portraits": idPortraitureTab,
+    "events": idEventTab,
+    "commercial": idCommercialTab,
+    "personal-work": idPersonalWorkTab,
+};
+
 /* Variables */
 let hasAddedEventListeners = false;
 
@@ -611,18 +621,64 @@ function showPersonalWorkImages(pillClickedId) {
     // addClassDisplay(classPersonalWork, shouldReversePrimaryAction);
 }
 
+function updateHash(filterKey) {
+    if (window.history.pushState) {
+        window.history.pushState(null, null, window.location.pathname + '#' + filterKey);
+    }
+}
+
+function handleHashChange() {
+    const hash = window.location.hash.substring(1); // Remove the '#'
+    const targetId = filterByHash[hash];
+
+    if (targetId) {
+        const targetButton = document.getElementById(targetId);
+        if (targetButton && !targetButton.classList.contains('hide')) {
+            // Trigger the click handler for this tab
+            const clickEvent = new Event('click');
+            targetButton.dispatchEvent(clickEvent);
+        }
+    }
+}
+
 function addAllTabEventListeners() {
     if (!hasAddedEventListeners) {
-        const allEventHandler = event => { showAllImages(idAllTab) };
-        const portraitEventHandler = event => { showPortraitureImages(idPortraitureTab) };
-        const eventEventHandler = event => { showEventImages(idEventTab) };
-        const commercialEventHandler = event => { showCommercialImages(idCommercialTab) };
-        const personalWorkEventHandler = event => { showPersonalWorkImages(idPersonalWorkTab) };
+        const allEventHandler = event => { 
+            showAllImages(idAllTab);
+            updateHash('all');
+        };
+        const portraitEventHandler = event => { 
+            showPortraitureImages(idPortraitureTab);
+            updateHash('portraits');
+        };
+        const eventEventHandler = event => { 
+            showEventImages(idEventTab);
+            updateHash('events');
+        };
+        const commercialEventHandler = event => { 
+            showCommercialImages(idCommercialTab);
+            updateHash('commercial');
+        };
+        const personalWorkEventHandler = event => { 
+            showPersonalWorkImages(idPersonalWorkTab);
+            updateHash('personal-work');
+        };
         addTabEventListener(idAllTab, allEventHandler);
         addTabEventListener(idPortraitureTab, portraitEventHandler);
         addTabEventListener(idEventTab, eventEventHandler);
         addTabEventListener(idCommercialTab, commercialEventHandler);
         addTabEventListener(idPersonalWorkTab, personalWorkEventHandler);
+
+        // Listen for hash changes (for anchor navigation)
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Check for initial hash on page load
+        if (window.location.hash) {
+            handleHashChange();
+        } else {
+            // Show all images by default if no hash is present
+            showAllImages(idAllTab);
+        }
     }
 
     hasAddedEventListeners = true;
@@ -776,7 +832,7 @@ function setLightboxCloseEventListeners() {
    setLightboxListeners();
 }
 
-// populateGalleryColumns(shuffle(listAllImages));
+populateGalleryColumns(listAllImages);
 addAllTabEventListeners();
 
 setLightboxCloseEventListeners();
