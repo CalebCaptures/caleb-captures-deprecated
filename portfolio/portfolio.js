@@ -776,7 +776,7 @@ function setLightboxCloseEventListeners() {
    setLightboxListeners();
 }
 
-populateGalleryColumns(shuffle(listAllImages));
+// populateGalleryColumns(shuffle(listAllImages));
 addAllTabEventListeners();
 
 setLightboxCloseEventListeners();
