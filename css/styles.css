@@ -257,11 +257,11 @@ h1, h2, h3, p {
     }
 
     /* Create space in the middle for the logo */
-    .navigation-list li:nth-child(2) {
+    .navigation-list li:nth-child(3) {
         margin-right: 120px; /* Adjust this to match your logo width + desired spacing */
     }
 
-    .navigation-list li:nth-child(3) {
+    .navigation-list li:nth-child(4) {
         margin-left: 120px; /* Should match the margin-right above */
     }
 
