@@ -229,40 +229,29 @@ h1, h2, h3, p {
         position: relative;
     }
 
-    /* Logo container - centered absolutely */
+    /* Logo sits on the far left, in normal flow */
     #mobile-navigation-bar {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
+        display: flex;
+        align-items: center;
     }
 
-    /* Navigation content - full width */
+    /* Navigation content - takes remaining space, links pushed right */
     #navigation-bar-content {
         display: flex !important;
         position: static;
         background: none;
-        width: 100%;
+        width: auto;
         padding: 0;
     }
 
-    /* Navigation list - split layout */
+    /* Navigation list - right-aligned */
     .navigation-list {
-        width: 100%;
+        width: auto;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        gap: 3rem;
-        padding: 0 2rem;
-    }
-
-    /* Create space in the middle for the logo */
-    .navigation-list li:nth-child(3) {
-        margin-right: 120px; /* Adjust this to match your logo width + desired spacing */
-    }
-
-    .navigation-list li:nth-child(4) {
-        margin-left: 120px; /* Should match the margin-right above */
+        gap: 2rem;
+        padding: 0;
     }
 
     /* Make sure logo image doesn't get too small */
