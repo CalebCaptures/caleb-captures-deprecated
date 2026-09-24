@@ -20,6 +20,7 @@
 
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
         <link rel="stylesheet" type="text/css" href="../css/offerings.css">
+        <link rel="stylesheet" type="text/css" href="../css/lightbox.css">
     </head>
 
     <body>
@@ -95,6 +96,18 @@
                 <img src="../images/portfolio/portrait/yuen-grad-3(alyssa).jpg" alt="Caleb Captures portraits photo" loading="lazy" decoding="async">
             </div>
         </section>
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-information-and-actions">
+                <p id="lightbox-counter"></p>
+                <button class="lightbox-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="lightbox-image-container">
+                <img id="chevron-backward" src="../images/portfolio/chevron_backward.svg" alt="Previous Image Button">
+                <img id="lightbox-image" class="lightbox-image" src="" alt="">
+                <img id="chevron-forward" src="../images/portfolio/chevron_forward.svg" alt="Next Image Button">
+            </div>
+        </div>
         <script src="../navigation.js"></script>
+        <script src="../lightbox.js"></script>
     </body>
 </html>
