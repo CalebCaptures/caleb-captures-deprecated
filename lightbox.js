@@ -1,10 +1,10 @@
 /* Shared photo-grid lightbox for the portraits, events, and commercial pages */
 (function () {
-    const grid = document.querySelector('.photo-grid');
+    const grids = document.querySelectorAll('.photo-grid');
     const lightbox = document.getElementById('lightbox');
-    if (!grid || !lightbox) return;
+    if (grids.length === 0 || !lightbox) return;
 
-    const images = Array.from(grid.querySelectorAll('img'));
+    const images = Array.from(grids).flatMap((g) => Array.from(g.querySelectorAll('img')));
     if (images.length === 0) return;
 
     const lightboxImage = document.getElementById('lightbox-image');
