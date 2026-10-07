@@ -2,7 +2,10 @@
     display: flex;
     align-items: stretch;
     min-height: 100vh;
-    background-color: var(--background-navigation);
+    width: 100%;
+    margin: 0;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .about-text {
