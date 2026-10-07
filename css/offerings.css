@@ -111,7 +111,7 @@ h2.text-on-background-primary {
     font-weight: 400;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--background-navigation);
     margin: 5rem auto 2rem;
     max-width: 1200px;
     padding: 0 2rem;
