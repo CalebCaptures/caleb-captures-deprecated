@@ -12,6 +12,7 @@ p a {
     display: flex;
     flex-direction: column;
     padding: 2rem 0;
+    text-align: center;
 }
 
 .text-on-background-primary {
@@ -143,7 +144,7 @@ h2.text-on-background-primary {
 
 .cta-wrap {
     text-align: center;
-    margin: 5rem auto 0;
+    margin: 2rem auto 0;
 }
 
 .cta-button {
