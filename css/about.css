@@ -1,92 +1,85 @@
 #hero {
     display: flex;
-    align-items: stretch;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
     width: 100%;
+    min-height: calc(100vh - 3rem);
     margin: 0;
+    padding: 2rem 3rem;
     background-color: var(--background-primary);
     box-sizing: border-box;
 }
 
 .about-text {
-    flex: 1 1 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem 3rem 2rem 10rem;
-    box-sizing: border-box;
+    flex: 0 1 34rem;
+    padding: 0;
 }
 
 #about-heading {
     color: var(--text-primary);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 500;
-    margin: 0 0 1.5rem;
+    line-height: 1.2;
+    margin: 0 0 1.75rem;
 }
 
 .about-text p {
     color: var(--text-primary);
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 300;
-    line-height: 1.6;
-    margin: 0 0 1rem;
+    line-height: 1.7;
+    margin: 0 0 1.25rem;
 }
 
 .about-text p > a {
-    color: var(--text-navigation-selected);
+    color: var(--text-secondary);
     text-decoration: underline;
 }
 
 .about-photo {
-    flex: 1 1 55%;
+    flex: 0 0 auto;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    overflow: hidden;
-    padding-top: 2rem;
-    box-sizing: border-box;
+    align-items: center;
 }
 
 .about-photo img {
-    max-width: 100%;
-    max-height: 95vh;
-    object-fit: contain;
     display: block;
+    height: clamp(560px, calc(100vh - 5rem), 1300px);
+    width: auto;
+    max-width: 100%;
 }
 
 @media screen and (max-width: 900px) {
     #hero {
         flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5rem;
         min-height: unset;
+        padding: 1.5rem 1.5rem 2.5rem;
     }
 
-    .about-text,
-    .about-photo {
-        flex: unset;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Photo first on mobile, text below - reads better than text-then-photo */
+    /* Photo first on mobile, text below */
     .about-photo {
         order: -1;
     }
 
+    .about-photo img {
+        height: min(55vh, 520px);
+    }
+
     .about-text {
-        padding: 2.5rem 1.5rem 1rem;
+        flex: unset;
+        width: 100%;
         text-align: center;
     }
 
     #about-heading {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     .about-text p {
         font-size: 1rem;
-    }
-
-    .about-photo img {
-        max-width: 65%;
-        max-height: 60vh;
     }
 }
