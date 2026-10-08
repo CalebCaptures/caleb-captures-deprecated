@@ -312,3 +312,7 @@ h1, h2, h3, p {
         left: 0;
     }
 }
+/* Capitalise nav links (tagline is a separate element and is unaffected) */
+.navigation-list li a {
+    text-transform: capitalize;
+}
