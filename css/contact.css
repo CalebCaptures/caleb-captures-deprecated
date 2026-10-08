@@ -125,3 +125,9 @@
         margin-top: 1rem;
     }
 }
+/* Side by side: line "Or here" up with "Get in touch here" */
+@media screen and (min-width: 1200px) {
+    .contact-information-container {
+        margin-top: 26px;
+    }
+}
