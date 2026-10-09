@@ -4,7 +4,15 @@
     const lightbox = document.getElementById('lightbox');
     if (grids.length === 0 || !lightbox) return;
 
-    const images = Array.from(grids).flatMap((g) => Array.from(g.querySelectorAll('img')));
+    const raw = Array.from(grids).flatMap((g) => Array.from(g.querySelectorAll('img')));
+    // Keep each category together (e.g. all Weddings, then Social, then Industry) so
+    // the arrows step through one type before moving on to the next.
+    const groupOrder = [];
+    raw.forEach((img) => {
+        const g = img.dataset.group || '';
+        if (!groupOrder.includes(g)) groupOrder.push(g);
+    });
+    const images = groupOrder.flatMap((g) => raw.filter((img) => (img.dataset.group || '') === g));
     if (images.length === 0) return;
 
     const lightboxImage = document.getElementById('lightbox-image');

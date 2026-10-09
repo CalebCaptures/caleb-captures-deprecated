@@ -202,3 +202,15 @@ h2.text-on-background-primary {
 .photo-grid.subcol-photos.landscape img {
     aspect-ratio: 3 / 2;
 }
+
+/* One testimonial under the three category photos */
+.single-testimonial {
+    max-width: 640px;
+    margin: 2.5rem auto 0;
+    padding: 0 2rem;
+}
+
+.single-testimonial .testimonial {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
