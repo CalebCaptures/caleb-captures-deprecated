@@ -203,14 +203,66 @@ h2.text-on-background-primary {
     aspect-ratio: 3 / 2;
 }
 
-/* One testimonial under the three category photos */
-.single-testimonial {
-    max-width: 640px;
-    margin: 2.5rem auto 0;
+/* "Kind words": standalone testimonial cards, deliberately styled differently from the
+   under-photo captions so they don't read as belonging to the photos above */
+.testimonial-cards {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 2rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-.single-testimonial .testimonial {
-    font-size: 1.1rem;
-    opacity: 0.85;
+.testimonial-card {
+    margin: 0;
+    padding: 2.25rem 2rem 1.75rem;
+    background-color: #242424;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card::before {
+    content: "\201C";
+    display: block;
+    height: 2.6rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--background-navigation);
+}
+
+.testimonial-card blockquote {
+    flex: 1;
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+.testimonial-card .emoji {
+    font-style: normal;
+}
+
+.testimonial-card figcaption {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--background-navigation);
+}
+
+.testimonial-cards + .cta-wrap {
+    margin-top: 3.5rem;
+}
+
+@media screen and (max-width: 1180px) {
+    .testimonial-cards {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
 }
