@@ -264,3 +264,21 @@ h2.text-on-background-primary {
     color: var(--text-primary);
     opacity: 0.75;
 }
+
+/* Stronger title treatment for busy / bright hero photos (used on Commercial) */
+.hero-title--strong {
+    z-index: 1;
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.65),
+        0 3px 12px rgba(0, 0, 0, 0.8),
+        0 6px 36px rgba(0, 0, 0, 0.9);
+}
+
+/* Soft dark glow behind the title so it lifts off the photo */
+.hero-wrap--dim::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 45% 40% at center, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+}
